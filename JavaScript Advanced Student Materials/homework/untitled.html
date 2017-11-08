@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function Box(a,b,c,d){
+			this.height = a;
+			this.width = b;
+			this.depth = c;
+			this.material = d;
+
+		}
+			Box.prototype.volume = function(){
+				return this.height * this.width * this.depth;
+			}
+			Box.prototype.equals = function(otherObj){
+				if(this.material === otherObj.material){
+					return true;
+				}else{
+					return false;
+				}
+			}
+			var Box1 = new Box(100,20,30,"Картон");
+			var Box2 = new Box(20,10,10,"Карто");
+
+			var equa = Box1.equals(Box2);
+
+			document.write("Объем: " + Box1.volume()+ " <br />");
+			document.write("Объем: " + Box2.volume()+ " <br />");
+			document.write("Материал: " + equa);
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

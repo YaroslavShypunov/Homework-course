@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+        $(function(){
+       $('div').on('click',function (){
+           $('body').addClass('class1');
+       });
+            })
+    </script>
+    <style>
+        body{
+            background: -webkit-repeating-linear-gradient(top left, white, white 30px, lightgrey 30px, lightgrey 60px);
+            background: -moz-repeating-linear-gradient(top left, white, white 30px, lightgrey 30px, lightgrey 60px);
+            background: -ms-repeating-linear-gradient(top left, white, white 30px, lightgrey 30px, lightgrey 60px);
+            background: repeating-linear-gradient(top left, white, white 30px, lightgrey 30px, lightgrey 60px);
+        }
+        div{
+            margin-left: 30%;
+            margin-top: 20%;
+            font-size: 30px;
+            border:1px solid grey;
+            width: 200px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 12px grey;
+            background: -webkit-linear-gradient(top,white 30%,grey 100%);
+            background: -moz-linear-gradient(top,white 30%,grey 100%);
+            background: -ms-linear-gradient(top,white 30%,grey 100%);
+            background: linear-gradient(top,white 30%,grey 100%);
+        }
+        .class1{
+                       background: -webkit-repeating-linear-gradient(top left, white, white 30px, red 30px, red 60px);
+            background: -moz-repeating-linear-gradient(top left, white, white 30px, red 30px, red 60px);
+            background: -ms-repeating-linear-gradient(top left, white, white 30px, red 30px, red 60px);
+            background: repeating-linear-gradient(top left, white, white 30px, red 30px, red 60px);
+        }
+    </style>
+</head>
+<body id="body">
+    <div id="div">CSS3 BUTTON</div>
+</body>
+</html>

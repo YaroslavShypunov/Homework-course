@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            counter-reset: oNe;
+            
+        }
+        ol{
+          list-style-type: none;
+
+        }
+        body > ol > li::before{
+            counter-increment: oNe;
+            content: counter(oNe) ". ";
+             counter-reset: tWo;
+        }
+        body > ol > li > ol > li::before{
+            counter-increment:tWo;
+            content: counter(oNe) "." counter(tWo) " "
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Использовать шрифты
+        <ol>
+        <li>font-face</li>
+        <li>GOOGLE WEB FONTS</li>
+        <li>Поддержка шрифтов</li>    
+        </ol>
+        </li>
+        <li>Применять эффекты тени к тексту.</li>
+        <li>Разбивать текст на колонки и форматировать
+        <ol>
+            <li>Разбивание текста на колонки</li>
+            <li>Форматирование колонок</li>
+        </ol>
+        </li>
+        <li>Форматировать выделение текста
+        <ol>
+            <li>Примиение счетчика в оформлении</li>
+            <li>Вставить генерируемого содержимого в тексте.</li>
+        </ol>
+        </li>
+    </ol>
+</body>
+</html>

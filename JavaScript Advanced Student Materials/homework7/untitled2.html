@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.addEventListener("load",init,false);
+		function init(){
+			  var input = document.getElementById("input");
+              var watermark = input.getAttribute("data-watermark");
+              var formInp = document.forms[0].login;
+              funInput();
+              formInp.onfocus = function (){
+              	formInp.value = "";
+              	formInp.style.color = "black";
+              	formInp.style.fontStyle = "normal";
+              }
+              function funInput(){
+              	formInp.value = watermark;
+              	formInp.style.color = "gray";
+              	formInp.style.fontStyle = "italic";
+              }
+		}
+	</script>
+</head>
+<body>
+<form>
+	<input type="text" name="login" data-watermark="Введите логин" id="input">
+</form>
+</body>
+</html>

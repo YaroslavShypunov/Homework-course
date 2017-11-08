@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    window.onload = function(){
+        a = document.getElementById("a");
+        b = document.getElementById("b");
+        parag = document.getElementById("parag");
+        submit = document.getElementById("submit");
+        submit.onclick = function(){
+            a = parseInt(a.value);
+            b = parseInt(b.value);
+            alert(a + b);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST","CalcHandler.ashx");
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    parag.innerHTML = xhr.responseText;
+                }
+            }
+            xhr.send("a="+a + "&b="+b);
+        } 
+    }
+    </script>
+</head>
+<body>
+   <form action="">
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <input type="button" id="submit" value="Нажми">
+    </form>
+    <p id = "parag"></p>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var MathFrameWork = new Object();
+
+		MathFrameWork.f = function (a,b,varianty){
+			if(typeof (a) == 'number' && typeof (b) == 'number'){
+		  		MathFrameWork.result = 0;
+          switch(varianty){
+          	case "+":
+          	MathFrameWork.result = a + b;
+          	break;
+          	case "-":
+            MathFrameWork.result = a - b;
+            break;
+            case "*":
+            MathFrameWork.result = a * b;
+            break;
+            case "/":
+            MathFrameWork.result = a / b;
+            break;
+            default:
+            document.write("Ввели не правильный вариант вычисления");
+            break;
+          }
+          return MathFrameWork.result;
+	   	} else if(a instanceof Array && b instanceof Array){
+			var length = 0;
+			var result = [];
+			if(a.length >= b.length){
+				 length = a.length;
+			}else{
+				 length = b.length;
+			}
+			for(var i = 0; i < length; i++){
+              var operand1 = parseFloat(a[i]);
+              var operand2 = parseFloat(b[i]);
+
+			switch(varianty){
+            case "+":
+              result[i] = operand1 + operand2;
+            break;
+            case "-":
+            
+            result[i] = operand1 - operand2;
+            
+            break;
+            case "*":
+           
+            result[i] = operand1 * operand2;
+            
+            break;
+            case "/": 
+             if(operand2 == 0){
+            return alert("На ноль делить нельзя!");
+            }else{
+             result[i] = operand1 / operand2;
+            }
+            break;
+            default:
+            document.write("НЕ правильный вариант вычисления");
+            break;
+			}
+			}
+			return result;
+		}
+	}
+	var vybor = +prompt("вы хотите посчитать массивы (1) или числа (2)"); 
+	if(vybor == 2){
+	 MathFrameWork.a = +prompt("Введите число a","0");
+		 MathFrameWork.b = +prompt("Введите число b","0");
+		 varianty = prompt("Тип ваших вычислений");
+		 MathFrameWork.result = MathFrameWork.f(MathFrameWork.a,MathFrameWork.b,varianty);
+		alert("Ответ: " + MathFrameWork.result);
+} else if(vybor == 1){
+        var vyb = +prompt("Размер массива 1 ");
+		MathFrameWork.a = new Array(vyb);
+		
+		for(var i = 0; i < vyb;i++){
+           MathFrameWork.a[i] = +prompt("Введите число в массив");
+         }
+          var vyb2 = +prompt("Размер массива 2");
+          MathFrameWork.b = new Array(vyb2);
+         for(var i = 0; i < vyb2;i++){
+           MathFrameWork.b[i] = +prompt("Введите число в массив");
+         }
+         alert(MathFrameWork.a);
+         alert(MathFrameWork.b);
+		 var varianty = prompt("Какое вычисление вы хотите провести");
+		
+		MathFrameWork.result = MathFrameWork.f(MathFrameWork.a,MathFrameWork.b,varianty); 
+		
+		alert(MathFrameWork.result);
+		
+		}else{
+			alert("Нет такого выбора");
+		} 
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

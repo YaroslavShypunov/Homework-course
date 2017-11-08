@@ -1,0 +1,97 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	   var ab = 0;
+	   var varianty = 0;
+		var MathFrameWork = {
+			firstNum: undefined,
+			secondNum: undefined,
+			result: undefined
+		}
+		MathFrameWork.f = function () {
+            varianty = prompt("Выберите тип вычисления");
+            if(typeof(firstNum) == 'number' && typeof(secondNum) == 'number' ){
+          switch(varianty){
+          	case "+":
+          	result = firstNum + secondNum;
+          	break;
+          	case "-":
+            result = firstNum - secondNum;
+            break;
+            case "*":
+            result = firstNum * secondNum;
+            break;
+            case "/":
+            result = firstNum / secondNum;
+            break;
+            default:
+            document.write("Ввели не правильный вариант вычисления");
+            break;
+          }
+          return result;
+	   	}else if(firstNum instanceof Array && secondNum instanceof Array){
+			var length = 0;
+			MathFrameWork.result = [];
+			if(firstNum.length >= secondNum.length){
+				 length = firstNum.length;
+			}else{
+				 length = secondNum.length;
+			}
+			for(var i = 0; i < length; i++){
+              var operand1 = parseFloat(firstNum[i]);
+              var operand2 = parseFloat(secondNum[i]);
+
+			switch(varianty){
+            case "+":
+              MathFrameWork.result[i] = operand1 + operand2;
+            break;
+            case "-":
+            
+            MathFrameWork.result[i] = operand1 - operand2;
+            
+            break;
+            case "*":
+           
+            MathFrameWork.result[i] = operand1 * operand2;
+            
+            break;
+            case "/": 
+             if(operand2 == 0){
+            return alert("На ноль делить нельзя!");
+            }else{
+             MathFrameWork.result[i] = operand1 / operand2;
+            }
+            break;
+            default:
+            document.write("НЕ правильный вариант вычисления");
+            break;
+			}
+			}
+			return MathFrameWork.result;
+		}
+		};
+        ab = +prompt("Вы желаете ввести 1.массивы или 2.числа?","0");
+        if(ab == 1){
+        	MathFrameWork.firstNum=[];
+        	MathFrameWork.secondNum = [];
+            ab = +prompt("Какой размер массива 1:","0");
+            for(var i = 0; i < ab; i++){
+            	MathFrameWork.firstNum[i] = +prompt("Введите число массива","0");
+            }
+             ab = +prompt("Какой размер массива 2:","0");
+            for(var i = 0; i < ab; i++){
+            	MathFrameWork.secondNum[i] = +prompt("Введите число массива","0");
+            }
+            document.write(MathFrameWork.f());
+
+        }else if(ab == 2){}else{
+        	document.write("Неверный выбор");
+        }
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

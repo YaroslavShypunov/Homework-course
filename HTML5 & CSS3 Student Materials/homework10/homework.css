@@ -1,0 +1,39 @@
+body{
+    background: #1D1D1D;
+    color: grey;
+}
+h1,h2,h3{
+    color: grey;
+}
+h1{
+    margin-top: 4%;
+    margin-left: 14%;
+    font-weight:100;
+}
+h2{
+    font-size: 20px;
+}
+h3{
+    font-size: 12px;
+    color: white;
+}
+p{
+    font-size: 10px;
+}
+.row > div{
+    background: #414143;
+    width: 200px;
+    height: 150px;
+    border: 1px solid #1D1D1D;
+}
+.container > .row:nth-of-type(1) > div{
+    background: #939498;
+}
+.container > .row:nth-of-type(1) > div:nth-of-type(1){
+    background: #D1D2D4;
+}
+.row > div > div{
+    margin-top: 43%;
+    background: black;
+    opacity:0.6;
+}

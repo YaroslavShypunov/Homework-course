@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section{
+            background-color:#DADADA;
+            margin:50px;
+            width: 400px;
+            padding:10px;
+            text-align:center;
+        }
+        input{
+            width: 150px;
+            margin-top:0px;
+        }
+        tr{
+            text-align: right;
+        }
+        table + input{
+         margin-top: 10px;  
+            font-size:15px;
+            color:grey;
+            background-color:#DADADA;
+         padding:5px 10px;
+            width:120px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+       <form action="">
+       <table>
+       <tr>
+        <td>Slider</td>
+           <td><input type="range" min="1" max="100" step="1"></td> 
+        </tr>
+        <tr>
+        <td> Numeric spinner </td>
+        <td><input type="number" min="0" max="100"> </td>
+           </tr>
+        <tr>
+        <td>
+        Date picker </td>
+        <td><input type="date" min="1900-01-01" max="2017-10-15"> </td>
+        </tr>
+        <tr>
+       <td> Color picker</td>
+       <td> <input type="color"> </td>
+       </tr>
+       <tr>
+       <td> Text field with placeholder </td>
+        <td> <input type="text" textcholder="Insert your text here"> </td>
+        </tr>
+        <tr>
+      <td>  Url field </td>
+       <td> <input type="url" textcholder="http://net.tutsplus.com/"> </td>
+       </tr>
+       <tr>
+        <td> Email field </td>
+        <td> <input type="email" textcholder="contact@qhinda.net"> </td>
+        </tr>
+        </table>
+        
+        <input type="submit" value="Submit form">
+        </form>
+    </section>
+</body>
+</html>

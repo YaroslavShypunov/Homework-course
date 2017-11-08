@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img{
+			width: 700px;
+			height: 500px;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			first = document.getElementById('first');
+			second = document.getElementById('second');
+			third = document.getElementById('third');
+			img = document.getElementById('img');
+		first.onclick = function(){
+			img.src = "images/3-12.jpg";
+		}
+		second.onclick = function(){
+			img.src = "images/788331c1bb5c.jpg";
+		}
+		third.onclick = function(){
+			img.src = "images/Черная-кухня-в-стиле-контемпорари-и-минимализм.jpg";
+		}
+		}
+	</script>
+</head>
+<body>
+	<img id="img" src="images/26-12.jpg" alt=""> <br>
+	<input type="button" id="first" value="жми">
+	<input type="button" id="second" value="жми">
+	<input type="button" id="third" value="жми">
+</body>
+</html>

@@ -1,0 +1,418 @@
+body{
+	background-color: rgb(231,236,239);
+	margin:0;
+	padding:0;
+	font-family: Arial,sans-serif;
+	font-size:16px;
+
+}
+/* ______________________________HEADER______________________*/
+#header{
+	background-color: white;
+	margin-top: -20px;
+	width: 100%;
+	border-bottom: 1px solid rgb(231,236,239);
+	height: 50px;
+	font-size:13px;
+	font-weight: bold;
+
+}
+.ulheader > li{
+display: inline;
+margin-left: 50px;
+}
+#ulheader{
+	margin-top: 20px;
+
+}
+#imgheader{
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+}
+a{
+	color: grey;
+	text-decoration: none;
+	
+	padding: 0px 35px 0px 35px;
+
+}
+a:hover{
+ color:rgb(105,156,107);
+}
+.a:hover{
+	z-index:2;
+	padding-bottom:10px;
+	border-bottom:3px solid rgb(105,156,107);
+}
+.a:active {
+color:rgb(105,156,107);
+	padding-bottom:10px;
+	border-bottom:3px solid rgb(105,156,107);
+	}
+.imf{
+	position:absolute;
+	top:8px;
+
+
+}
+.imf1{
+	left: 70px;
+
+}
+.imf2{
+	left: 180px;
+}
+.imf3{
+	left: 315px;
+	top:11px;
+}
+.imf4{
+	top:13px;
+	left: 70px;
+}
+.imf5{
+	top:14px;
+	left: 175px;
+}
+.imf6{
+	top:15px;
+	left: 320px;
+}
+#twitter{
+	position: absolute;
+	left: 47%;
+	top: 10px;
+}
+#inputone{
+	position: absolute;
+	right: 180px;
+	top: 7px;
+	width: 200px;
+	height: 30px;
+	border-radius:  50px 50px 50px 50px;
+	border: 1px solid grey;
+
+}
+#imgheader{
+	position:absolute;
+	top: 7px;
+	right: 140px;
+}
+#twitnut{
+	position:absolute;
+	top: 5px;
+	right: 40px;
+	border: 1px solid rgb(105,156,107);
+	background-color: rgb(105,156,107);
+	padding:7px 10px;
+	color: white;
+	border-radius: 45px 45px 45px 45px;
+}
+/*************************************************/
+/*___________________________CENTER__________________*/
+/*___________________________center1__________________*/
+.centerdivone{
+	position:absolute;
+	left: 70px;
+	width:290px;
+	height:220px;
+	top: 55px;
+	background-color:white;
+}
+.fotofon{
+	width: 100%;
+	height: 100px;
+}
+.ava{
+  height: 70px;
+  width: 70px;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top:70px;
+  left:30px;
+}
+.centersylki{
+	position:absolute;
+	top:160px;
+	left:0px;
+	font-size:12px;
+	font-weight: bold;
+}
+.pf1{
+	left: -20px;
+
+}
+.pf2{
+	left:70px;
+}
+.pf3{
+	left: 165px;
+}
+.centernumber{
+	position:absolute;
+	top:180px;
+	font-weight: bold;
+	left: 0px;
+	color:rgb(105,156,107);
+}
+.pf4{
+	left: -30px;
+}
+.pf5{
+	left:60px;
+}
+.pf6{
+	left: 155px;
+}
+#YARON{
+	color: black;
+	font-weight: bold;
+	border: none;
+	position:absolute;
+	left: 110px;
+	top: 110px;
+	font-size: 18px;
+	padding:0;
+}
+#YARON:hover{
+	border-bottom: 1px solid black;
+}
+#MrYaron{
+	font-size: 14px;
+	position:absolute;
+	left: 108px;
+	top: 132px;
+	padding:0;
+}
+/*----------------------center2--------------------------*/
+.avacenter{
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	position:absolute;
+	left: 32%;
+	top: 70px;
+}
+#inputtwo{
+	position:absolute;
+	left: 35%;
+	top: 70px;
+	height: 35px;
+	width:480px;
+	border-radius:  50px 50px 50px 50px;
+	border: 1px solid rgb(105,156,107);
+
+}
+/*----------------------------------center3------------------*/
+.centerdivtwo{
+	position:absolute;
+	left: 70px;
+	width:290px;
+	height:500px;
+	top: 290px;
+	background-color:white;
+}
+.actual{
+	position: absolute;
+	left:80px;
+	top:290px;
+	font-weight: bold;
+	font-size:18px;
+}
+.actual2{
+	top:310px;
+}
+.actualizm{
+	position:absolute;
+	left: 110px;
+	top: 320px;
+	color:rgb(105,156,107);
+	font-size:12px;
+
+}
+.actualizm:hover{
+	
+	text-decoration: underline;
+
+}
+.textactual{
+	position:absolute;
+	margin-top:20px;
+	padding:0px;
+	left: 100px;
+    top: 350px;
+    color: rgb(105,156,107);
+    font-size: 14px;
+    font-weight: bold;
+}
+.textactual2{
+ top: 400px;
+}
+.textactual3{
+top:450px;
+}
+.textactual4{
+top:500px;
+}
+.textactual5{
+top:550px;
+}
+.textactual6{
+top:600px;
+}
+.textactual7{
+top:650px;
+}
+.twitactual{
+	position:absolute;
+	margin-top:20px;
+	padding:0px;
+	left: 100px;
+    top: 370px;
+    color:grey;
+    font-size:12px;
+
+}
+.twitactual2{
+ top:420px;
+}
+.twitactual3{
+ top:470px;
+}
+.twitactual4{
+ top:520px;
+}
+.twitactual5{
+ top:570px;
+}
+.twitactual6{
+ top:620px;
+}
+.twitactual7{
+ top:670px;
+}
+/*------------------------------center4------------------*/
+.centerdivthree{
+	width: 600px;
+	margin-left:370px;
+	margin-top: 80px;
+	background-color:white;
+	
+	
+
+}
+.avastena{
+  height: 45px;
+  width: 45px;
+  border: 3px solid white;
+  border-radius:50%;
+  margin-top:10px;
+  margin-left:10px;
+}
+
+.centerdivthreediv{
+	margin-top:0px;
+	background-color:white;
+	 border: 1px solid rgb(231,236,239);
+}
+.name{
+	margin-left: 70px;
+	margin-top:-44px;
+	font-weight:bold;
+}
+.nametwit{
+	color:grey;
+	margin-top:-34px;
+	margin-left: 120px;
+	font-size:13px;
+}
+.textall{
+	
+	margin:-10px 20px 20px 70px;
+}
+
+/*----------------------------center5---------------------*/
+.centerdivfour{
+	float:right;
+	margin-right:90px;
+	background-color:white;
+	padding: 10px;
+	margin-top: -350px;
+	width: 250px;
+	padding-bottom:20px;
+}
+.fourcenter{
+	color:green;
+	font-size:13px;
+}
+.fourcenter1{
+	margin-top:-16px;
+	margin-left:85px;
+	font-size:13px;
+	float:left;
+
+}
+.fourcenter2{
+	margin-top:-16px;
+	margin-left:155px;
+	font-size:13px;
+	float:left;
+
+}
+.fourcenter:hover{
+	text-decoration: underline;
+}
+.kogo{
+	font-weight: bold;
+	font-size: 19px;
+	margin-top: 10px;
+	margin-left: 0px;
+}
+.read{
+	border: 2px solid rgb(105,156,107);
+   padding-top: 5px;
+   padding-bottom: 5px;
+    margin-left: 65px;
+	border-radius: 45px 45px 45px 45px;
+	width:80px;
+	margin-top: -10px;
+	
+}
+.readsyl{
+	color: rgb(105,156,107);
+	font-size: 13px;
+	font-weight: bold;
+	margin-left:-16px;
+
+}
+hr{
+	height:1px;
+}
+.lasta{
+	color: rgb(105,156,107);
+	font-size:12px;
+	margin-left:-40px;
+}
+.lasta:hover{
+	text-decoration:underline;
+}
+.lastimg{
+	width: 20px;
+	height: 20px ;
+    margin-bottom: -5px;
+
+}
+/*---------------------------------center6-------------------*/
+.centerdivfive{
+
+	float:right;
+	margin-right:90px;
+	background-color:white;
+	padding: 10px;
+	width: 250px;
+	padding-bottom:20px;
+	font-size: 15px;
+}
+}

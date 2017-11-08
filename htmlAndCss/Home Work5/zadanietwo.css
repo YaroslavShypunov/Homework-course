@@ -1,0 +1,38 @@
+body{
+	margin-right: 50px;
+	margin-left: 50px;
+}
+.header{
+	font-family:Calibri,Times;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+hr{
+	
+	width:1000px;
+	height:1px;
+	color: black;
+}
+.hello{
+	font-family:Segoe UI,sans-serif;
+	
+}
+a{
+ color: black;
+ text-decoration: none;
+}
+h1{
+	text-align: center;
+}
+pre{
+	font-family: Calibri;
+	font-style: italic;
+}
+span{
+	font-style: italic;
+}
+
+.donthave{
+	margin-left: 50px;
+}

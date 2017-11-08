@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+/*
+		var a = +prompt("Введите число a","0");
+		var b = +prompt("Введите число b","0");
+		var varianty = prompt("Тип ваших вычислений");
+		var otwet = Math(a,b,varianty);
+		alert("Ответ: " + otwet);
+		
+*/
+/*
+		var tab1 = new Array(10,15,4,1);
+		var tab2 = new Array(2,5,1);
+		var varianty = prompt("Какое вычисление вы хотите провести");
+		
+		 var otw = Math(tab1,tab2,varianty); 
+		alert("Первый: " + otw[0] + " Второй " + otw[1] + " Третий " + otw[2]);
+		*/
+		var object1 = {
+			a: 10,
+			b: 2
+		}
+		var object2 = {
+			a: 2,
+			b: 10
+		}
+		var varianty = prompt("Тип ваших вычислений");
+		var odpowiedz = Math(object1,object2,varianty);
+		alert("Ответ первого объекта: " + odpowiedz.resula + " Ответ второго объекта: " + odpowiedz.resulb);
+
+		  function Math(a,b,varianty){
+		  	if(typeof (a) == 'number' && typeof (b) == 'number'){
+		  		var c =0;
+          switch(varianty){
+          	case "+":
+          	c = a + b;
+          	break;
+          	case "-":
+            c = a - b;
+            break;
+            case "*":
+            c = a * b;
+            break;
+            case "/":
+            c = a / b;
+            break;
+            default:
+            document.write("Ввели не правильный вариант вычисления");
+            break;
+          }
+          return c;
+	   	}else if(a instanceof Array && b instanceof Array){
+			var length = 0;
+			var ren = [];
+			if(tab1.length >= tab2.length){
+				 length = tab1.length;
+			}else{
+				 length = tab2.length;
+			}
+			for(var i = 0; i < length; i++){
+              var operand1 = parseFloat(tab1[i]);
+              var operand2 = parseFloat(tab2[i]);
+
+			switch(varianty){
+            case "+":
+              ren[i] = operand1 + operand2;
+            break;
+            case "-":
+            
+            ren[i] = operand1 - operand2;
+            
+            break;
+            case "*":
+           
+            ren[i] = operand1 * operand2;
+            
+            break;
+            case "/": 
+             if(operand2 == 0){
+            return alert("На ноль делить нельзя!");
+            }else{
+             ren[i] = operand1 / operand2;
+            }
+            break;
+            default:
+            document.write("НЕ правильный вариант вычисления");
+            break;
+			}
+			}
+			return ren;
+		}else if(a instanceof Object && b instanceof Object){
+			var resul = {};
+			switch(varianty){
+				case "+":
+                 resul.resula = a['a'] + b['a'];
+                 resul.resulb = a['b'] + b['b'];
+				break;
+				case "-":
+				resul.resula = a['a'] - b['a'];
+                 resul.resulb = a['b'] - b['b'];
+				break;
+				case "*":
+				resul.resula = a['a'] * b['a'];
+                 resul.resulb = a['b'] * b['b'];
+				break;
+				case "/":
+				if(b['a'] == 0 || b['b'] == 0){
+					alert("На ноль делить нельзя");
+				}else{
+					resul.resula = a['a'] / b['a'];
+                 resul.resulb = a['b'] / b['b'];
+				}
+				break;
+				default:
+				 document.write("Не верный знак");
+				 break;
+			}
+			return resul;
+		}
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

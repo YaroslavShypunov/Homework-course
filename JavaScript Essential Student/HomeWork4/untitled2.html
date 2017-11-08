@@ -1,0 +1,58 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+
+	var a = 0;
+		function HomeWork(d){ 
+			var b = 0;
+			if(a < 0){
+				document.write("Число " + a + "  является отрицательным " + " <br />");
+			} else if(a > 0){
+				document.write("Число " + a + "  положительное" + " <br />");
+			}
+		};
+		function HomeWorktwo(d){
+          for(var i = 2; i <= a; i++){
+          	if(i == a){
+                b = 2;
+               }
+                else if(a%i == 0){
+                b = 1;
+                break;
+          	}
+          }
+          if( b == 1){
+          	document.write("Число " + a + " не является простым" + " <br />");
+          }else if(b == 2){
+          	document.write("Число " + a + " является простым" + " <br />");
+          }
+      };
+      function Homeworkthree(d){
+          if(a%2 == 0){
+          	document.write("Число " + a + " делится на 2" + " <br />");
+          }
+           if(a%5 == 0){
+          	document.write("Число " + a + " делится на 5" + " <br />");
+          }
+          if(a%3 == 0){
+          	document.write("Число " + a + " делится на 3" + " <br />");
+          }
+          if(a%6 == 0){
+          	document.write("Число " + a + " делится на 6" + " <br />");
+          }
+          if(a%9 == 0){
+          	document.write("Число " + a + " делится на 9" + " <br />");
+          }
+		};
+       a = +prompt("Введите пожалуйста число","0");
+       HomeWork(a);
+       HomeWorktwo(a);
+       Homeworkthree(a);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

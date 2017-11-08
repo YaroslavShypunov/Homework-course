@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="untitled1.css">
+	<script>
+	  window.onload = function(){
+	  	randomNumber = Math.random() * 100;
+	  	randomNumber = Math.floor(randomNumber);
+	  	document.getElementById("value").onblur = function (){
+	  		value = document.getElementById("value").value;
+	  	
+	  	p = document.getElementById("p");
+
+  
+	  	if(randomNumber == value){
+	  		p.className = "win";
+	  		p.innerHTML = "Вы угадали загадочное число!";
+	  		randomNumber = Math.random() * 100;
+	  	    randomNumber = Math.floor(randomNumber);
+	  	}
+	  	else if(randomNumber < value){
+	  		p.className = "luser";
+	  		p.innerHTML = "Ваша число больше загадочного числа";
+	  	}
+	  	else if(randomNumber > value){
+	  		p.className = "luser";
+	  		p.innerHTML = "Ваша число меньше загадочного числа";
+	  	}
+	  }}
+	</script>
+</head>
+<body>
+	<div>
+	<p id="p">ЗАГАДАЧНОЕ ЧИСЛО</p><br/>
+	<input type="text" id="value">
+	
+	</div>
+</body>
+</html>

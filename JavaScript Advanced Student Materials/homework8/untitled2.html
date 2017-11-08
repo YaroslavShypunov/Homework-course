@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.addEventListener("load",function(){
+            if(window.localStorage.pageColor && window.localStorage.sizePage){
+            	document.body.style.backgroundColor = window.localStorage.pageColor;
+            	document.body.style.fontSize = window.localStorage.sizePage;
+            }
+            saveButton = document.getElementById("savebutton");
+            saveButton.addEventListener("click",function(){
+            	var colorSel = document.getElementById("selects");
+            	var texts = document.getElementById("texts");
+            	window.localStorage.pageColor = colorSel.value;
+            	window.localStorage.sizePage = texts.value;
+            	document.body.style.backgroundColor = colorSel.value;
+            	document.body.style.fontSize = texts.value;
+            });
+		});
+	</script>
+</head>
+<body>
+	<form name="iform">
+	<select name="select1" id="selects">
+		<option value="red">red</option>
+		<option value="orange">orange</option>
+		<option value="yellow">yellow</option>
+		<option value="blue">blue</option>
+		<option value="green">green</option>
+	</select>
+	<input type="text" id="texts">
+	<input type="button" id="savebutton" value="Сохранить">
+   </form>
+   <p>HELLO WORLD!!</p>
+</body>
+</html>

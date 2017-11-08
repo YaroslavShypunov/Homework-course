@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Классная работа</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+
+        $(function(){
+            $('button').on('click',function(){
+               i = 0;
+                stopInterval = setInterval(timeInterval,1000);
+            });
+        })
+        function timeInterval(){
+            $('p').text(i);
+            i++;
+            if(i==11){
+                clearInterval(stopInterval);
+            }
+            
+        }
+
+    </script>
+</head>
+<body>
+    
+    
+    <button>Start</button>
+    <p></p>
+
+</body>
+</html>

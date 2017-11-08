@@ -1,0 +1,19 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+			 document.getElementById("value").onblur = function (){
+			 	var first = document.getElementById("value").value;
+			var Element = document.createElement("marquee");
+                Element.innerHTML = first;
+                document.body.appendChild(Element);
+            }
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="value">
+</body>
+</html>

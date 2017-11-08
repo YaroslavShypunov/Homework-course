@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            padding-top:10px;
+        }
+        header{
+            border:1px solid black;
+            margin-top:10px;
+            padding-bottom:20px;
+            padding-left:10px;
+        }
+        footer{
+            border:1px solid black;
+            margin-top:10px;
+            padding-bottom:20px;
+            padding-left:10px;
+        }
+        input{
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+        p{
+            margin-top:-10px;
+            background:white;
+            width:140px;
+        }
+        footer p{
+            width:118px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Запись на прием </h1>
+    <form action="">
+    <header>
+        <p>Личная информация</p>
+        Имя
+        <input type="text" id="name"> <br>
+        Телефон
+        <input type="tel"> <br>
+        Адрес электронной почты
+        <input type="email"> <br>
+        Дата рождения
+        <input type="date" max="2017-10-15">
+    </header>
+    <footer>
+        <p>Назначить прием</p>
+        Какова причина вашего визита?
+        <input type="text" name="name1" list="list1"/> 
+        <datalist id="list1">
+            <option value="Плановый осмотр">Плановый осмотр</option>
+            <option value="Симптомы простуды или гриппа">Симптомы простуды или гриппа</option>
+            <option value="Анализ крови">Анализ крови</option>
+            <option value="Послеоперационный осмотр">Послеоперационный осмотр</option>
+        </datalist> <br>
+        Степень болевых ощущений
+        <input type="text"> <br>
+        Предпочитаемая дата
+        <input type="date"> <br>
+        Предпочитаемое время   
+        <input type="time">
+        
+    </footer>
+    <input type="submit">
+    </form>
+</body>
+</html>

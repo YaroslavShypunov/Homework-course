@@ -1,0 +1,69 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+
+		var o = 0;
+		var t = 0;
+		var th = 0;
+	
+		
+		
+		function functionTwo(){
+			var par;
+			 if(o == 0){		     
+			wOne = window.open("window2.html","Window Name", "width=400,height=400,status=yes,resizable=no");
+			o++;
+			par = document.getElementById("first");
+			par.innerHTML = "Js урок №1 открыт";
+			}else{
+				wOne.close();
+				o = 0;
+				par = document.getElementById("first");
+				par.innerHTML="JS урок 1";
+			}
+
+		}
+		
+		
+
+		function functionThree(){
+			if(t == 0){
+			wTwo = window.open("window3.html","Window Name", "width=400,height=400,status=yes,resizable=no");
+			var par = document.getElementById("second");
+			par.innerHTML = "Js урок №2 открыт";
+			t++;
+		}else{
+			wTwo.close();
+				t = 0;
+				par = document.getElementById("second");
+				par.innerHTML="JS урок 2";
+		}
+
+		}
+		function functionFour(){
+			if(th == 0){
+			wThree = window.open("window4.html","Window Name", "width=400,height=400,status=yes,resizable=no");
+			var par = document.getElementById("three");
+			par.innerHTML = "Js урок №3 открыт";
+		 th++;
+		}else{
+			wThree.close();
+				th = 0;
+				par = document.getElementById("three");
+				par.innerHTML="JS урок 3";
+		}
+
+		}
+
+	
+	
+	</script>
+</head>
+<body>
+	<a href="https://itvdn.com/ru/video/javascript-advanced" onclick="functionTwo()" onclick="functionTwoTwo()" target="_blank" ><span id="first">JS урок 1</span></a><br />
+	<a href="https://itvdn.com/ru/video/javascript-advanced/constructors-and-prototypes" onclick="functionThree()" onclick="functionThreeTwo()" target="_blank"><span id="second">JS урок 2</span></a><br />
+	<a href="https://itvdn.com/ru/video/javascript-advanced/document" onclick="functionFour()" onclick="functionFourTwo()" target="_blank"><span id="three">JS урок 3</span></a>
+</body>
+</html>

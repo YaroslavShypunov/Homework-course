@@ -1,0 +1,45 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input{
+			font-size: 20px;
+			padding: 10px;
+			background-color: #48D1CC;
+			color: #C71585;
+			border:2px solid #C71585;
+			border-radius: 30px;
+			margin-top:20%;
+
+		}
+	</style>
+	<script>
+		window.addEventListener("load",init,false);
+		function init(){
+			value = 300;
+			input = document.getElementById("input");
+			input.addEventListener("mouseover",run,false);
+			input.addEventListener("mouseout",notRun,false);
+		}
+		function run(){
+			if(value !=900){
+			value = value + 200;
+		}
+		else{
+			value = value - 600;
+		}
+
+			input.style.marginLeft = value + "px";
+
+			
+		}
+		function notRun(){
+            input.style.marginLeft = value + "px";
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="Получи Скидку!" id="input">
+</body>
+</html>

@@ -1,0 +1,32 @@
+p{
+	font-size: 20px;
+}
+img{
+	width:250px;
+	height:250px;
+	float: right;
+}
+div{
+	padding: 20px;
+}
+.header{
+	background:SkyBlue;
+	height: 400px;
+	margin-bottom: 0px;
+
+}
+.center{
+	background:DodgerBlue;
+	height: 400px;
+	margin-top: -20px;
+}
+.end{
+	background:blue;
+	height:400px;
+	margin-top: -40px;
+}
+.earth{
+	font-size: 60px;
+	font-weight:bold;
+	margin-left: 150px;
+}

@@ -1,0 +1,20 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function Example(n,l){
+			this.name = n;
+			this.lastname = l;
+		}
+		Example.prototype.toString = function(){
+             return("Name: " + this.name + " <br/>" + "Last Name: " + this.lastname + "<br/>");
+		}
+		var e = new Example("Yaroslav","Shypunov");
+		document.write(e.toString());
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Homework</title>
+	<script>
+		document.write("<b> Задание 3 </b> <br />");
+		var tab = new Array(5);
+
+		
+		for(var i = 0; i < tab.length; i++){
+			tab[i] = new Array(5);
+		}
+		for(var i = 0; i < tab.length; i++){
+		
+			for( var j = 0; j < tab.length; j++){
+				tab[i][j] = +prompt("Введите число");
+			
+				if( i == j ){
+					if(tab[i][j] > 0){
+						tab[i][j] = 1;
+					}
+					else if(tab[i][j] < 0){
+                         tab[i][j] = 0;
+					}
+
+				}
+				document.write(tab[i][j] + " &nbsp &nbsp &nbsp");
+			}
+			document.write(" <br />");
+		}
+
+
+	</script>
+		
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		background: url(razmetka.jpg) no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%;
+	}
+	.divArrow:first-child{
+		margin-left: 44%;
+	}
+	    .divArrow{
+	    	margin-top: 60px;
+	    	float: left;
+	    }
+		.arrow{
+           width:50px;
+           height:50px;
+		}
+		#ball{
+			position:absolute;
+			top:380px;
+			left:720px;
+		}
+		#ballImg{
+			width:25px;
+			height:25px;
+			
+			
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			first = document.getElementById("first");
+			second = document.getElementById("second");
+			third = document.getElementById("third");
+			forth = document.getElementById("forth");
+			ball = document.getElementById("ball");
+			first.addEventListener("click",firstFunction,false);
+			second.addEventListener("click",secondFunction,false);
+			third.addEventListener("click",thirdFunction,false);
+			forth.addEventListener("click",forthFunction,false);
+		}
+		function ballClick(ball){
+			elemX = ball.offsetLeft;
+			elemY = ball.offsetTop;
+			masElements = [elemX,elemY]; 
+			return masElements;
+		}
+		function firstFunction(){
+			var positionMas = ballClick(ball);
+
+			ball.style.top = positionMas[1] - 10;
+		}
+		function secondFunction(){
+			var positionMas = ballClick(ball);
+
+			ball.style.left = positionMas[0] - 10;
+		}
+		function thirdFunction(){
+			var positionMas = ballClick(ball);
+
+			ball.style.top = positionMas[1] + 10;
+		}
+		function forthFunction(){
+			var positionMas = ballClick(ball);
+
+			ball.style.left = positionMas[0] + 10;
+		}
+
+	</script>
+</head>
+<body>
+	<div class="divArrow" id="first"><img src="double_right1600 — копия.png" alt="" class="arrow"></div>
+	<div class="divArrow" id="second"><img src="double_right1600 — копия 2.png" alt="" class="arrow"></div>
+	<div class="divArrow" id="third"><img src="double_right1600 — копия 3.png" alt="" class="arrow"></div>
+	<div class="divArrow" id="forth"><img src="double_right1600 — копия 4.png" alt="" class="arrow"></div>
+	<div id="ball"><img src="ordem-4-premier-league-football.png" alt="" id="ballImg"></div>
+</body>
+</html>

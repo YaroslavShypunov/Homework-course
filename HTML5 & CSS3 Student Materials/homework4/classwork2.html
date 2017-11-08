@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        y = 1;
+    function draw(){
+        canvas = document.getElementById('canvas');
+        context = canvas.getContext('2d');
+        
+        context.beginPath();
+        context.moveTo(50,0);
+        context.lineTo(100,70);
+        context.lineTo(0,70);
+        context.closePath();
+        context.stroke();
+        context.restore();
+        
+        function animateTroj(){
+            if(y!= 330){
+            context.clearRect(0,0,400,400);
+            context.beginPath();
+            context.moveTo(50,y);
+            context.lineTo(100,70+y);
+            context.lineTo(0,70+y);
+            context.closePath();
+            context.stroke();
+            context.restore();
+            y++;
+            }else{
+              clearInterval(p);
+            }
+        }
+        
+        var p = setInterval(animateTroj,1);
+    }
+        
+    if(window.addEventListener)
+        window.addEventListener('load',draw,true);
+    </script>
+</head>
+<body>
+    <canvas width="400px" height="400px" style="border:1px solid black" id="canvas"></canvas>
+</body>
+</html>

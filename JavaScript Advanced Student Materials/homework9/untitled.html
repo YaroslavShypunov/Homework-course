@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.addEventListener("load",function(){
+			var img = document.getElementsByTagName('img');
+            i=0;
+            var intervalFirst;
+            img1 = document.images["first"];
+            img2 = document.images["second"];
+            img3 = document.images["third"];
+            img4 = document.images["forth"];
+            img5 = document.images["fifth"];
+            alert(img1 + "," +img2 + "," + img3 + "," + img4 + "," + img5);
+            	function ImgBorder(){
+            		
+			img[i].style.border="2px solid red";
+			i++;
+			if(i == 5){
+	clearInterval(intervalFirst);
+}
+		}  
+
+		if(i < 5){
+				intervalFirst = setInterval(ImgBorder,1000);
+}   
+
+		});
+	
+	</script>
+	<style>
+		img{
+			width:250px;
+			height:250px;
+		}
+	</style>
+</head>
+<body>
+	<img name="first" src="images/26-12.jpg" alt="">
+	<img name="second" src="images/3-12.jpg" alt="">
+	<img name="third" src="images/788331c1bb5c.jpg" alt="">
+	<img name="forth" src="images/kuhnya-v-stile-minimalizm.jpg" alt="">
+	<img name="fifth" src="images/Черная-кухня-в-стиле-контемпорари-и-минимализм.jpg" alt="">
+</body>
+</html>

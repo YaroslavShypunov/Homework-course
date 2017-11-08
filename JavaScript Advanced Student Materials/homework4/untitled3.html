@@ -1,0 +1,51 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="untitled3.css">
+	<script>
+		window.onload = function(){
+			body = document.getElementById("body");
+             s = 0;
+			setInterval(funInter,1000);
+		}
+		
+		  function funInter(){
+             
+              if(s != 0){ 
+              item = body.childNodes;   
+              for(var i = 0; i < item.length; i++)           
+               	body.removeChild(item[i]);
+              }
+               first = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+               second = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+               third = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+               if(first == second || first == third || third == second){
+               	funInter();
+               }else{
+               	
+               	one = document.createElement("div");
+               	one.className = "class" + first;
+               	body.appendChild(one);
+
+               	two = document.createElement("div");
+               	two.className = "class" + second;
+               	body.appendChild(two);
+
+               	three = document.createElement("div");
+               	three.className = "class" + third;
+               	body.appendChild(three);
+
+               	
+
+               }
+              
+               	s++;	
+               }
+		  
+
+	</script>
+</head>
+<body id="body">
+</body>
+</html>

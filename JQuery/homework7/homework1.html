@@ -1,0 +1,141 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+        <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script>
+       $(function(){
+           
+          $('#accordion').accordion({
+              collapse: true
+          });
+           var availableTags = [
+    "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+           ];
+           $('#tags').autocomplete({
+               source:availableTags
+           });
+           
+           $('#progressbar').progressbar({
+               value: 15
+           });
+           
+           $('#datepicker').datepicker();
+           
+           $('#spinner').spinner();
+           
+           $('#slider').slider();
+           
+           function Run(){
+
+            t = $('#widgetsType').val();
+                 selectedEffect = $("#effectTypes").val();
+
+                var options = {};
+
+                if (selectedEffect === "scale") {
+                    options = { percent: 0 };
+                } else if (selectedEffect === "transfer") {
+                    options = { to: "#button", className: "ui-effects-transfer" };
+                } else if (selectedEffect === "size") {
+                    options = { to: { width: 200, height: 60 } };
+                }
+           
+            $('#progressbar').effect(selectedEffect,options,500,callback);   
+           };
+           
+           function callback(){
+               setTimeout(function (){
+                  $('#progressbar').removeAttr("style").hide().fadeIn(); 
+               },1000);
+           };
+           
+           $('#button').click(function (){
+               Run();
+               return false;
+           })
+           
+       });
+        
+        
+    </script>
+    <style>
+        body * {
+            margin-top: 25px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+   <div id="accordion">
+       <h3>Page1</h3>
+       <div>
+          <p> sfljafgafjkKLJASKFASBFASFHKASJSA
+           asfjoafojiwfewoeiwfjewjf
+           ewfjoekgvnewg,vmns..fklgjlkesgsdgdsgds
+           wegnewkgnewgnjewgkjwegnjwelg</p>
+       </div>
+       <h3>Page2</h3>
+       <div>
+        <p>   dslkfjsdgjsdgjsodvjixcijobnbjndbfojbfdiojb
+           wefjnwkg,egmwgnwek,gmnewjqw;wekjlskfjhas;fjaes
+           askfsiahdwuifhfjkdshdskdsldsgljdslkgdsgds;sd;ss</p>
+       </div> 
+   </div>
+          <div class="ui-widget" id="autokomplite">
+           <label for="tags">Tags:</label>
+           <input type="text" id="tags">
+       </div>
+       <div>
+          <label for="datepicker">Date:</label>
+           <input type="text" id="datepicker">
+       </div>
+       <div>
+           <label for="spinner">Number:</label>
+           <input type="text" id="spinner">
+       </div>
+       
+       <div id="progressbar"></div>
+       <div id="slider"></div>
+    <select name="effects" id="effectType">
+    <option value="size">Size</option>
+    <option value="scale">Scale</option>
+    <option value="transfer">Transfer</option>
+    </select>
+    <select name="widgets" id="widgetsType">
+        <option value="accordion">Accordion</option>
+        <option value="autokomplite">autokoplite</option>
+        <option value="datepicker">datepicker</option>
+        <option value="progressbar">progressbar</option>
+        <option value="spinner">spinner</option>
+        <option value="slider">slider</option>
+    </select>
+    <a href="#" id="button" class="ui-state-default ui-corner-all">RUN</a>
+</body>
+</html>

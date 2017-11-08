@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		
+
+       
+             var n = 0;
+			function ButtonOne(){
+				
+                var body = document.getElementById("bod");
+                var par = document.createElement("p");
+                par.innerHTML = "PARAGRAPH";
+                body.appendChild(par);
+                n++
+                if( n == 10){
+                	for(var i = 0; i < n; i++){
+                		 var pick = document.getElementById("bod");
+            var p = pick.lastChild;
+                pick.removeChild(p);
+                	}
+                	n = 0;
+                }
+                }
+
+
+	</script>
+</head>
+<body>
+<div id="bod">
+	<input type="button" value="Создать парагаф" onclick="ButtonOne()">
+	</div>
+</body>
+</html>

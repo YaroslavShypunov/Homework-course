@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            input = document.getElementById("input");
+            input.onclick = function(){
+                 var xhr = new XMLHttpRequest();
+                xhr.open("GET","homeworkAJAX.html",false);
+                var xhrTwo = new XMLHttpRequest();
+                xhrTwo.open("GET","homeworkAJAX2.html",false);
+
+                
+                xhr.onreadystatechange = function(){
+                    if (xhr.readyState == 4){
+                        if(xhr.status == 200){
+                            document.getElementById("output").innerHTML = "Сервера 1 прогрузились";
+                        }
+                    }
+                }
+                xhrTwo.onreadystatechange = function(){
+                    if(xhrTwo.readyState == 4){
+                        if(xhrTwo.status == 200){
+                            document.getElementById("output").innerHTML += "<br/> Сервера 2 прогрузились";
+                        }
+                    }
+                }
+                xhr.send();
+                xhrTwo.send();
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="input" type="button" value="Отправить данные на сервер">
+    <p id="output"></p>
+</body>
+</html>

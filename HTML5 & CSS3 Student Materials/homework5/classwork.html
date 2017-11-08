@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', function1,false);
+        function function1(){
+  div = document.querySelector('div');
+    clas1 = document.querySelectorAll('.clas1');
+    a = document.querySelector('a');
+    p = document.querySelector('p');
+    span = document.querySelector('span');
+    parg2 = document.querySelector('#parg2');
+    span1 = document.querySelector('#span1');
+    div4 = document.querySelector('#div4');
+            
+            
+            div.style.border="2px solid green";
+            for(var i = 0; i < clas1.length;i++){
+            clas1[i].style.border="2px solid red";
+            }
+            a.style.border="2px solid green";
+            p.style.border="2px solid green";
+            span.style.border="2px solid green";
+            parg2.style.border="2px solid blue";
+            span1.style.border="2px solid blue";
+            div4.style.border="2px solid blue";
+        }
+    </script>
+    <style>
+        body *{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div >div1</div>
+    <div class="clas1">div2</div>
+    <div class="clas1">div3</div>
+    <div id="div4">div4</div>
+    <p>paragraph1</p>
+    <p class="clas1">paragraph2</p>
+    <p id="parg2">paragraph3</p>
+    <a href="#">adres1</a>
+    <a href="#"  class="clas1">adres2</a>
+    <span id="span1">span1</span>
+    <span class="clas1">span2</span>
+    <span class="clas1">span3</span>
+</body>
+</html>

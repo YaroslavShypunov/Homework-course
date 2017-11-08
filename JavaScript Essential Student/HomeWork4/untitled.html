@@ -1,0 +1,50 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	var a = 0;
+	var b = 0;
+	var operacja = 0;
+		function add(a,b){
+            return a+b;
+		};
+		function sub(a,b){
+			return a-b;
+		};
+        function mul(a,b){
+        	return a*b;
+        };
+        function div(a,b){
+        	if(b==0){
+        	 return undefined;
+        	}else{
+        		return a/b;
+        	}
+        };
+        
+        operacja = +prompt("Выберите значение: 1 - сложение; 2 - вычитание; 3 - умножение; 4 - деление");
+        a = +prompt("Введите первое число","0");
+        b = +prompt("Введите второе число","0");
+        switch (operacja){
+        	case 1:
+        	document.write("Ответ: " + add(a,b));
+        	break;
+        	case 2:
+        	document.write("Ответ: " + sub(a,b));
+        	break;
+        	case 3:
+        	document.write("Ответ: " + mul(a,b));
+        	break;
+        	case 4:
+        	document.write("Ответ: " + div(a,b));
+        	break;
+          default:
+           document.write("Не правильный выбор");
+        }
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

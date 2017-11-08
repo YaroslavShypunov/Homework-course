@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload = function (){
+			body = document.getElementById("body");
+			document.getElementById("text1").onblur = function (){
+				text1 = document.getElementById("text1").value;
+			}
+			document.getElementById("text2").onblur = function (){
+				text2 = document.getElementById("text2").value;
+			}
+
+		
+		var btn2 = document.getElementById("level2");
+		if(btn2.addEventListener)
+{
+		 btn2.addEventListener("click",function (){
+		    
+			text1 = parseInt(text1);
+			text2 = parseInt(text2);
+			suma = text1 + text2;
+			p = document.createElement("p");
+			p.innerHTML = "Сумма: " + suma;
+			body.appendChild(p);            
+		 },false);
+
+		}
+
+		}
+
+		function functionLevel0(){
+			
+			text1 = parseInt(text1);
+			text2 = parseInt(text2);
+			suma = text1 + text2;
+			p = document.createElement("p");
+			p.innerHTML = "Сумма: " + suma;
+			body.appendChild(p);
+
+		}
+
+
+	</script>
+</head>
+<body id="body">
+	<input type="text" id="text1">
+	<input type="text" id="text2">
+	<input type="button" value="Level0" id="level0" onclick="functionLevel0()">
+	<input type="button" value="level2" id="level2">
+</body>
+</html>

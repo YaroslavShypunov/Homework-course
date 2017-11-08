@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Работа в классе</title>
+    <script src="jquery-1.10.2.js"></script>
+       <script>
+        $(document).ready(function () {
+            $('.inp').on('click', ClickFunc);
+                    function ClickFunc(){
+           
+                        var a = $('#par').val();
+        
+         $(a).css("background-color","red");
+                       
+            
+        }
+        });
+
+    </script>
+</head>
+<body>
+    <input type="text" id="par">
+    <input type="button" class="inp" value="кнопка">
+     <div style="background-color:aqua ">DIV</div>
+     <p style="background-color:brown ">PARAGRAPH</p>
+     
+
+
+</body>
+</html>

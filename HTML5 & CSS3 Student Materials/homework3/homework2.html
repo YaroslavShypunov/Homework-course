@@ -1,0 +1,123 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+            margin-top:50px;
+            margin-left:25px;
+        }
+        #b{
+            position:absolute;
+           top: 100px;
+            left:700px;
+        }
+    </style>
+   <script src="jquery-1.10.2.js"></script>
+    <script>
+     window.onload = function(){
+ 
+         var p = document.getElementsByTagName('p');
+         var price = 0;
+         var source = document.getElementById('a');
+         var source2 = document.getElementById('c');
+         var source3 = document.getElementById('d');
+         var source4 = document.getElementById('f');
+         
+         source3.addEventListener('dragstart',function(evt){
+             this.style.border = "2px dotted red";
+             
+             evt.dataTransfer.effectAllowed="move";
+             evt.dataTransfer.setData('Text',this.id);
+         },false);
+         source4.addEventListener('dragstart',function(evt){
+             this.style.border = "2px dotted red";
+             
+             evt.dataTransfer.effectAllowed = 'move';
+             evt.dataTransfer.setData('Text',this.id);
+         },false);
+         source.addEventListener('dragstart',function(evt){
+             this.style.border="2px dotted red";
+             
+             evt.dataTransfer.effectAllowed="move";
+             evt.dataTransfer.setData('Text',this.id);
+         },false);
+         
+         source2.addEventListener('dragstart',function(evt){
+             this.style.border="2px dotted red";
+             
+             evt.dataTransfer.effectAllowed = 'move';
+             evt.dataTransfer.setData('Text',this.id);
+         },false);
+         
+         source.addEventListener('dragend',function(evt){
+             this.style.border="";
+             p[0].innerHTML = "";
+             price += 500;
+         },false);
+         source2.addEventListener('dragend',function(evt){
+             this.style.border="";
+             p[1].innerHTML = "";
+             price += 8000;
+         },false);
+         
+         source3.addEventListener('dragend',function(evt){
+             this.style.border="";
+             p[2].innerHTML ="";
+             price += 1000;
+         },false);
+         source4.addEventListener('dragend',function(evt){
+             this.style.border="";
+             p[3].innerHTML = "";
+             price += 10000;
+         },false);
+         var targer = document.getElementById('b');
+         
+         targer.addEventListener('dragenter',function(evt){
+             this.style.border="1px solid yellow";
+         },false);
+         
+         targer.addEventListener('dragleave',function(evt){
+             this.style.border="";
+         },false);
+         
+         targer.addEventListener('dragover',function(evt){
+             if(evt.preventDefault) evt.preventDefault();
+             return false;
+         },false);
+         targer.addEventListener('drop',function(evt){
+             if(evt.preventDefault) evt.preventDefault();
+             if(evt.stopPropagation) evt.stopPropagation();
+             
+             this.style.border="";
+             var id = evt.dataTransfer.getData('Text');
+             
+             var elem = document.getElementById(id);
+             
+             this.appendChild(elem);
+             return false;
+         },false);
+         
+         $('input').on('click',function(){
+             alert("Ваша цена: " + price);
+         })
+     }
+          
+    </script>
+</head>
+<body>
+    <img src="589f08f476c6015a2d3afb07.png" alt="" class="a" id="a"> <br>
+    <p>Скейт: 500 грн</p>
+    <img src="7ee1935a92a504f7310f65001457ff2e.png" alt="" id='c'> <br>
+    <p>Гироскутер: 8 000 грн</p>
+    <img src="skates014.png" alt="" id='d'> <br>
+    <p>Ролики: 1 000 грн</p>
+    <img src="velomoto07.png" alt="" id='f'> <br>
+    <p>Велосипед: 10 000 грн</p>
+     <input type="button" value="Сколько нужно заплатить" id="button">
+    <img src="0_83516_12b8984d_orig.png" alt="" id='b'> <br>
+       
+</body>
+</html>

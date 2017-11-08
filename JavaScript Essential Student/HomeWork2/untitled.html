@@ -1,0 +1,113 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	document.write("Задание 2" + "<br>");
+		var a = +prompt("Введите число А","0");
+		var b = +prompt("Введите число В","0");
+		if( a < b){
+		for(var c = a + 1; c < b;c++){
+           document.write(c + " ");
+		}
+		document.write("<br>")
+		for(var c = a; c < b;c++){
+			if(c%2){
+              document.write(c + " ");
+			}else{
+				
+			}
+		}
+	}else{
+		document.write("Не верный ввод числа");
+	}
+  document.write("<br>"+"Задание 3" + "<br>");
+   var product = +prompt("Введите число продукта")
+   var n = 1;
+   do{
+   	n = n * product;
+   	product--;
+   }while(product>=1);
+ document.write("Количество возможных вариантов доставки: "+ n + "<br>");
+var figure = +prompt("Какую фигуру нарисовать  1.Прямоугольник  2.Прямоугольный треугольник  3.Равносторонний треугольник  4.Ромб");
+switch(figure){
+	case 1:
+	for(var first = 0; first < 5; first++){
+		document.write("<br>");
+		for( var second = 0; second < 7; second++){
+			document.write("*");
+		}
+	}
+	break;
+	case 2:
+	document.write("* ");
+	for(var third = 1; third < 8; third++){
+		document.write("<br>");
+      document.write("*");
+      for(var fourth = 1;fourth <= third;fourth++){
+      	document.write("&nbsp");
+      }
+      document.write("*");
+      if(third == 7){
+      	document.write("<br>" + "******");
+      }
+	}
+	break;
+	case 3:
+	document.write("&nbsp &nbsp &nbsp &nbsp &nbsp *" );
+	for(var fifth = 1 ;fifth < 8;fifth++){
+		document.write("<br>");
+		for(var sixth = 8; sixth > fifth; sixth--){
+          document.write("&nbsp");
+		}
+		document.write("*");
+		for(var seventh = 1;seventh <= fifth; seventh++ ){
+			document.write("&nbsp &nbsp");
+		}
+		document.write("*");
+		 if(fifth == 7){
+      	document.write("<br>" + "**************");
+      }
+	}
+	break;
+	case 4:
+	document.write("&nbsp &nbsp &nbsp &nbsp &nbsp *" );
+	for(var eight = 1 ;eight < 8;eight++){
+		document.write("<br>");
+		for(var nine = 8; nine > eight; nine--){
+          document.write("&nbsp");
+		}
+		document.write("*");
+		for(var ten = 1;ten <= eight; ten++ ){
+			document.write("&nbsp &nbsp");
+		}
+		document.write("*");
+		if(eight == 7){
+
+
+      	document.write("<br>" + "* &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *");
+      	for(var par = 7; par > 0;par--){
+      		document.write("<br>");
+  
+      		for(var eleven = 8; eleven > par; eleven--){
+          document.write("&nbsp");
+		}
+		document.write("*");
+		for(var twel = 1;twel <= par; twel++ ){
+			document.write("&nbsp &nbsp");
+		}
+		document.write("*");
+      	}
+      	document.write(" <br> &nbsp &nbsp &nbsp &nbsp &nbsp *" );
+} 
+
+}
+break;
+}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

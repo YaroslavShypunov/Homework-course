@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+     function draw(){
+         var canvas = document.getElementById('canvas');
+         var canvas2 = document.getElementById('canvas2');
+         
+         var context = canvas.getContext('2d');
+         var context1 = canvas2.getContext('2d');
+         
+         
+         
+         var gradient = context.createRadialGradient(190,120,90,190,120,180);
+         
+         gradient.addColorStop(0,'White');
+         gradient.addColorStop(1,'Black');
+         
+         context.fillStyle = gradient;
+         context.fillRect(0,0,400,250);
+         
+         
+         var img = new Image();
+         img.src= "Logo.png";
+
+         context1.drawImage(img,100,30,190,190);
+         context1.restore();
+         
+         
+     }
+        if(window.addEventListener)
+            window.addEventListener('load',draw,true);
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="400px" height="250px" style="border:1px solid black"></canvas>
+    <canvas id="canvas2" width="400px" height="250px" style="border:1px solid black"></canvas>
+</body>
+</html>

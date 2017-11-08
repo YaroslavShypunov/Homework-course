@@ -1,0 +1,51 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+
+   
+
+      function firstFunction(){
+      	var arg = [];
+      	var kod = location.search.substring(1);
+      	var par = kod.split("&");
+
+
+      	for(var i = 0; i < par.length; i++){
+
+      		var parametrs = par[i].indexOf('=');
+
+      		if(parametrs == -1){
+      			continue;
+      		}
+
+      		
+      	    var value = par[i].substring(parametrs + 1);
+      	    arg[i] = parseFloat(value);
+       	}
+      	return arg;
+      }
+
+
+       function secondFunction(){
+       	 var arg = firstFunction();
+       	 var suma = 0;
+
+       	 
+       	 suma = arg[0] + arg[1];
+       	
+       	 var e = document.createElement("p");
+
+       	 e.innerHTML = "Сумма " + suma;
+       	 document.body.appendChild(e); 
+       }
+	</script>
+</head>
+<body>
+
+	<input type="button" value="вывести значение" onclick="secondFunction()">
+
+
+</body>
+</html>

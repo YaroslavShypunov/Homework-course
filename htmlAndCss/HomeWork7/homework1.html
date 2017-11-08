@@ -1,0 +1,140 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="homework1.css">
+</head>
+<body>
+
+	<p>Шановний учаснику конкурсу «Вчитель-новатор»! <br>
+Заповніть, будь ласка, реєстраційну анкету українською мовою. <br>
+Прохання надати повну відповідь на всі поставлені запитання. <br>
+Якщо ви подаєте декілька конкурсних робіт, будь ласка, <br>
+заповніть дану анкету для кожної конкурсної роботи окремо. <br>
+Дякуємо Вам за участь у конкурсі та бажаємо успіхів!</p> <br>
+<form>
+<table width="100%">
+<tr>
+<td align="right">1. Прізвище</td>
+<td><input type="text" name="surname" value=""> </td>
+</tr>
+<tr>
+<td align="right">2. Ім'я по-батькові </td>
+<td><input type="text" name="lastname" valeur=""> </td>
+</tr>
+<tr>
+<td align="right">3.	Назва конкурсної роботи</td>
+<td> <input type="text" name="nameproject" value=""> </td>
+</tr>
+<tr>
+<td align="right">4.	Номінація конкурсної роботи (список для вибору)</td>
+<td> <select name="selectnomin">
+	<option value="f1">•  Навчальний проект</option>
+	<option value="f2">•	Виховний проект</option>
+ <option value="f3">•	Позашкільний проект</option>
+ <option value="f4">•	Навчальний контент</option>
+ <option value="f5">•	Он-лайновий освітній ресурс</option>
+ <option value="f6">•	Навчально-методичне забезпечення</option>
+</select> </td>
+</tr>
+<tr>
+<td align="right">5.	Навчальна дисципліна </td>
+<td><input type="study" placeholder="наприклад, біологія"> </td>
+</tr>
+<tr>
+<td align="right">
+6.	Чи була апробована ваша робота? </td>
+<td>Так <input type="radio" name="yn" value="yes"> <br> 
+Ні <input type="radio" name="yn" value="no"> <br></td>
+</tr>
+<tr>
+<td align="right">
+7.	Якщо так, то на якому рівні?</td>
+<td> <input type="text" name="ifyes" value=""> </td>
+</tr>
+<tr>
+<td align="right">8.	Повна назва установи, де ви працюєте </td>
+<td> <input type="text" name="namework" value=""> </td>
+</tr>
+<tr>
+<td align="right">9.	Ваша посада</td>
+<td> <input type="text" name="yourwork" value=""> </td>
+</tr>
+<tr>
+<td align="right">10.	Місто/населений пункт </td>
+<td><input type="text" name="city" value=""></td>
+</tr>
+<tr>
+<td align="right">11.	Область</td>
+<td><select name="oblast">
+<option value="a1">м.Севастополь</option>
+<option value="a2">м.Київ</option>
+<option value="a3">АР Крым</option>
+<option value="a4">Винницкая область</option>
+<option value="a5">Волынская область</option>
+<option value="a6">Днепропетровская область</option>
+<option value="a7">Донецкая область</option>
+<option value="a8">Житомирская область</option>
+<option value="a9">Закарпатская область</option>
+<option value="a10">Запорожская область</option>
+<option value="a11">Ивано-Франковская область</option>
+<option value="a12">Киевская область</option>
+<option value="a13">Кировоградская область</option>
+<option value="a14">Курорт Буковель</option>
+<option value="a15">Луганская область</option>
+<option value="a16">Львовская область</option>
+<option value="a17">Николаевская область</option>
+<option value="a18">Одесская область</option>
+<option value="a19">Полтавская область</option>
+<option value="a20">Ровенская область</option>
+<option value="a21">Сумская область</option>
+<option value="a22">Тернопольская область</option>
+<option value="a23">Харьковская область</option>
+<option value="a24">Херсонская область</option>
+<option value="a25">Хмельницкая область</option>
+<option value="a26">Черкасская область</option>
+<option value="a27">Черниговская область</option>
+<option value="a28">Черновицкая область</option>
+</select> </td>
+</tr>
+<tr>
+<td align="right">12.	 Мобільний телефон </td>
+<td><input type="tel" pattern="+38{10}" value="+38"> </td>
+</tr>
+<tr>
+<td align="right">13.	Електронна пошта </td>
+<td><input type="text" name="email" value=""> </td>
+</tr>
+<tr>
+<td align="right">14.	Ви брали участь у попередніх конкурсах  «Вчитель-новатор»? </td>
+<td>Так <input type="radio" name="be" value="yes"> <br> 
+Ні <input type="radio" name="be" value="no"> <br>
+</td>
+</tr>
+<tr>
+<td align="right">15.	Якщо так,  то вкажіть, коли саме.</td>
+<td> <input type="text" name="yesif"> </td>
+</tr>
+<tr>
+<td align="right">16.	 Яким чином ви дізналися про конкурс «Вчитель-новатор»? (на вибір, можна декілька варіантів)</td>
+<td>  <select multiple="multiple" name="selectmany">
+<option value="p1">-	Сайт МОН молодьспорту</option>
+<option value="p2">-	Сайт Майкрософт Україна</option>
+<option value="p3">-	Сайт Мережі «Партнерство в навчанні»</option>
+<option value="p4">-	Обласний ІППО</option>
+<option value="p5">-	Обласне управління освіти</option>
+<option value="p6">-	Міське управління освіти</option>
+<option value="p7">-	Osvita.com</option>
+<option value="p8">-	Gurt.org.ua</option>
+<option value="p9"><input type="text" nme="other">інше</option>
+</select> </td>
+</tr>
+<tr>
+<td align="right"><input type="checkbox" name="checkyes"></td>
+<td>Я даю згоду на обробку моїх персональних даних і погоджуюся з Політикою конфіденційності (галочка обязательна) </td>
+</tr>
+</table>
+<input type="submit" value="Отправка данных" id="submit">
+</form>
+</body>
+</html>

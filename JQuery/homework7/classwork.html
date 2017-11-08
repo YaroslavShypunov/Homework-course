@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+ <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+<script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+ 
+  <script>
+  $(function(){
+    $('#tags').datepicker({
+        changeMath:true,
+        onSelect: function(selectedDate){
+            $('#tags2').datepicker('option','minDate',selectedDate);
+            
+        }
+    });
+      $('#tags2').datepicker({
+         changeMath:true,
+          onSelect: function(selectedDate){
+              $('#tags').datepicker('option','maxDate',selectedDate);
+          }
+      });
+  });
+    </script>
+
+</head>
+<body>
+<div class='ui-widget'>
+    <label for="tags">First:</label>
+    <input type="text" id="tags">
+    <label for="tags2">Second:</label>
+    <input type="text" id="tags2">
+</div>
+
+</body>
+</html>

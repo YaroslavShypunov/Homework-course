@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function Human(n,l){
+			this.name = n;
+			this.lastname = l;
+       }
+       Human.prototype.age = function(age){
+       document.write(this.name + " have " + age + " years old" + ". <br/>");
+			}
+	  Human.prototype.toString = function(){
+	  	return "Name: " + this.name + ", Last Name: " + this.lastname + this.Likes +". <br/>";
+	  }
+	  Human.like = function(whatlike){
+            return", Like: " + whatlike;
+	  }
+	  var Alex = new Human("Alex","Alexsow");
+	  var Fiona = new Human("Fiona","Galager");
+
+	  Alex.Likes = Human.like("football");
+	  Fiona.Likes = Human.like("run");
+
+	  document.write(Alex);
+	  document.write(Fiona);
+
+	  Alex.age(15);
+	  Fiona.age(20);
+      
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

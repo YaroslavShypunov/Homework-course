@@ -1,0 +1,78 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input{
+			float: left;
+			background-color:black;
+			color:white;
+			width: 25%;
+			height: 200px;
+			font-size:15px;
+			margin: 0px;
+		}
+	</style>
+	<script>
+	window.addEventListener('load',init,false);
+		function init(){
+			 inputs = document.getElementsByTagName("input");
+			for(var i = 0; i < inputs.length; i++){
+				 e = inputs[i];
+
+				if(e.type != "text"){
+					continue;
+				}
+				if(e.dataset.charsFirst == undefined){
+					continue;
+				}
+				e.addEventListener('keypress',keyPress,false);
+			}
+		}
+		function keyPress(e){
+			if(!e) e = window.event;
+           if (e.charCode == 0 || e.charCode < 32) return true;
+				var charFirst = e.target.dataset.charsFirst;
+				var charSecond = e.target.dataset.charsSecond;
+				var charThird = e.target.dataset.charsThird;
+				var element = e.target.dataset.idd;
+				
+				var symbol = String.fromCharCode(e.charCode).toLowerCase();
+				if(charFirst.search(symbol) == -1){
+
+				
+				}else{
+					
+					var first = document.getElementById(element);
+
+					first.style.color = "red"; 
+				
+		
+				}
+				if(charSecond.search(symbol) == -1){
+				
+				}else{
+					var second = document.getElementById(element);
+					second.style.color = "green";
+				
+				}
+				if(charThird.search(symbol) == -1){
+				
+				}else{
+					var third = document.getElementById(element);
+					third.style.color = "blue";
+			
+				}
+
+			
+		
+}
+	</script>
+</head>
+<body>
+	<input type="text" data-chars-first="r" data-chars-second="g" data-chars-third="b" data-idd="first" id="first"> 
+	<input type="text" data-chars-first="r" data-chars-second="g" data-chars-third="b" data-idd="second" id="second"> 
+	<input type="text" data-chars-first="r" data-chars-second="g" data-chars-third="b" data-idd="third" id="third"> 
+	<input type="text" data-chars-first="r" data-chars-second="g" data-chars-third="b" data-idd="forth" id="forth"> 
+</body>
+</html>

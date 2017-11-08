@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var x = 6;
+		var y = 15;
+		var z = 4;
+		document.write(x += y - x++ * z, "<br>"); 
+		document.write(z = --x - y * 5 ,"<br>");
+
+		document.write(y /= x + 5%z ,"<br>");
+		document.write(z = x++ + y * 5,  "<br>");
+		document.write(x = y - x++ * z , "<br>"); 
+		var first;
+		var second;
+		var third;
+		first = prompt("Введите первое число");
+		second = prompt("Введите второе число");
+		third = prompt("Введите третье число");
+		f = parseInt(first);
+		s = parseInt(second);
+		t = parseInt(third);
+		var result = (f + s + t)/2;
+        alert(result);
+
+        var pi = 3.14;
+        var radius = prompt("Введите радиус");
+        var height = prompt("Введите высоту");
+        var r = parseInt(radius);
+        var h = parseInt(height);
+        var V = pi * r * r * h;
+        var S = 2 * pi * r * (r + h);
+        alert("V = " + V + "  " + "S = " + S);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

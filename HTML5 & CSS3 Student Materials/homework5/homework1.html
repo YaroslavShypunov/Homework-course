@@ -1,0 +1,87 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <script>
+  window.addEventListener('load',Fun1,false);
+        
+        function Fun1(){
+        header = document.getElementById("header");
+        footer = document.getElementById("footer");
+           function function10(){
+         
+            
+            header.style.backgroundColor = "bisque";
+            footer.style.backgroundColor = "aqua";
+            
+            setTimeout(function(){
+                header.style.backgroundColor = "aqua";
+            footer.style.backgroundColor = "bisque";
+            },1000);
+        }
+            
+
+            
+            
+            var input = document.getElementById('input');
+        
+            var worker = new Worker("fails.js");
+            
+            
+               worker.addEventListener('message',function(){
+                    
+            par = document.getElementById('par');
+            par.innerHTML="Посортированный массив: " + e.data;
+                
+            },true);
+        
+        
+            
+            function function2(){
+             worker.postMessage("");
+                setInterval(function10,2000);
+                
+            }
+         input.addEventListener('click',function2,false);
+    
+        }
+    </script>
+    <style>
+    header{
+        width:100%;
+        height: 10%;
+        background-color:aqua;
+        }
+        footer{
+            width:100%;
+            height:10%;
+            background-color:darkviolet;
+        }
+        section{
+            padding-top:20px;
+            width:100%;
+            height: 80%;
+            background-color:bisque;
+        }
+        div{
+            width:70%;
+            height:80%;
+            background-color:white;
+
+            margin-left:15%;
+            padding:100px 50px;
+        }
+    </style>
+</head>
+<body>
+   <header id="header"></header>
+   <section>
+       <div>
+       <p id="par"></p>
+       <input type="button" id="input" value="ОТСОРТИРОВАТЬ 1 000 000">
+       </div>
+   </section>
+   <footer id="footer"></footer>
+</body>
+</html>

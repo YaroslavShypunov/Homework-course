@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+    $(function(){
+        $('div').each(function(index,element){
+        $(element).data('number',index);
+        });
+        $('div').click(function(){
+            var d = $(this).data('number');
+            
+            $('div p:nth-of-type(2)').eq(d).text('number '  + d);
+        });
+    });
+    </script>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div><p>Artem</p> <p></p></div>
+        <div><p>Piter</p><p></p></div>
+            <div><p>Tom</p><p></p></div>
+                <div><p>Kate</p><p></p></div>
+                    <div><p>Sara</p><p></p></div>
+    <div><p>Alina</p><p></p></div>
+        <div><p>Yaroslav</p><p></p></div>
+            <div><p>Yanita</p><p></p></div>
+                <div><p>Artur</p><p></p></div>
+                    <div><p>Ivan</p><p></p></div>
+                    
+</body>
+</html>

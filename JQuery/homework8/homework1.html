@@ -1,0 +1,30 @@
+<html>
+
+   <head>
+      <script type = "text/javascript" src = "MooTools-Core-1.6.0.js"></script>
+      <script type = "text/javascript" src = "MooTools-More-1.6.0.js"></script>
+      <script src="jquery-1.10.2.js"></script>
+      
+      <script type = "text/javaScript">
+          
+          var newJ = jQuery.noConflict();
+          newJ(function(){
+              
+              newJ('p').click(function () {
+         var Rectangle = new Class({
+
+            details: function() {
+               document.write("Второй текст");
+            },
+         });
+         var rec = new Rectangle();
+         rec.details();
+                  });
+              });
+      </script>
+   </head>
+      <p>Первый текст</p>
+   <body>
+   </body>
+   
+</html>

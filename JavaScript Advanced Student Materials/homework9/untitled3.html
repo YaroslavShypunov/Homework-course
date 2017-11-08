@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.addEventListener("load",function(){
+			CanvasFunction("CanvasCont",[100,24,1,5,12,98,24,76],600,300,"red");
+		});
+		function CanvasFunction(canvas,allfigure,width,height,color){
+			var canvas = document.getElementById(canvas);
+			canvas.width = width;
+			canvas.height = height;
+			var context = canvas.getContext("2d");
+
+			var max = -90000000;
+			for(var i = 0; i < allfigure.length;i++){
+				numb = allfigure[i];
+				if(numb > max){
+					max = numb;
+				}
+			}
+			var sootnoszenie = height / max;
+
+			var widthStolb = Math.floor(width/allfigure.length);
+
+			for(var i = 0; i < allfigure.length; i++){
+				var barHeight = allfigure[i] * sootnoszenie;
+				var x = widthStolb * i;
+				var y = height - barHeight;
+
+				context.fillStyle = color;
+				context.fillRect(x,y,widthStolb-2,barHeight);
+			}
+		}
+	</script>
+</head>
+<body id = "body"> 
+
+	<canvas id="CanvasCont"></canvas>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="PageHomeWork">
+<head>
+    <title>Task 1</title>
+    <script src="../Libraries/angular.js"></script>
+    <link href="../Libraries/bootstrap.css" rel="stylesheet" />
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet" />
+    <script src="model.js"></script>
+
+
+    <script>
+               
+      var pageHomeWork = angular.module('PageHomeWork', []);
+     var  pageHomeWorkCtrl = pageHomeWork.controller("pageHomeWorkCtrl", function ($scope){
+    $scope.text = model;
+});
+    </script>
+</head>
+<body  ng-controller="pageHomeWorkCtrl" class="container">
+ <div class="panel panel-default" >
+  <h2 class="panel-heading">ITVDN News</h2>
+  <div ng-repeat="texts in text">
+  <div class="well" style="margin: 20px;">
+      <h3>{{texts.title}}</h3>
+      <h6>{{texts.published}}</h6>
+      <p>{{texts.description}}</p>
+      <a class="btn btn-primary" href="{{texts.link}}">Читать дальше</a>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

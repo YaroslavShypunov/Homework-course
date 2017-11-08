@@ -1,0 +1,12 @@
+div{
+	width: 100px;
+	height: 100px;
+	float: left;
+	background-color: green;
+}
+.classDiv{
+	background-color: red;
+}
+.div{
+	background-color: green;
+}

@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	  window.onload = function() {
+		var a= prompt("Введите выражени");
+		if(a.match(/\d{2}\+\d{2}/)){
+		var res = a.match(/\d{2}\+\d{2}/);
+		
+		var suma = res[0].match(/\d\d/g);
+		suma[0] = parseInt(suma[0]);
+		suma[1] = parseInt(suma[1]);
+		var grandSuma = suma[0] + suma[1];
+		document.write("Result: " + grandSuma);
+		}
+		else if(a.match(/\d{2}\-\d/)){
+			var res = a.match(/\d{2}\-\d/);
+			var suma = res[0].split("-");
+			suma[0] = parseInt(suma[0]);
+			suma[1] = parseInt(suma[1]);
+			var grandSuma = suma[0] - suma[1];
+			document.write("Result: " + grandSuma);
+
+		}
+	}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

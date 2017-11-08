@@ -1,0 +1,62 @@
+body{
+    background-color: #333333;
+}
+header{
+    background-color: #666666;
+  
+    height: 100px;
+    width: 99%;
+    margin: 10px;
+    border-radius: 20px;
+}
+nav{
+    
+
+    background-color: #666666;    
+    height: 550px;
+    width: 24%;
+    margin: 10px;
+    border-radius: 20px;
+    float:left;
+}
+footer{
+    background-color: #666666;
+    height: 80px;
+    width: 99%;
+    margin: 10px;
+    border-radius: 20px;
+}
+aside{
+    background-color: #666666;
+    height: 550px;
+    width: 24%;
+    margin-left:76%;
+    border-radius: 20px;
+    margin-top:20px;
+}
+section{
+    background-color: #666666;
+    float:left;  
+    height: 550px;
+    width: 48%;
+    margin: 10px;
+    border-radius: 20px;
+}
+section *{
+    background-color: #999999;
+    
+    
+    height: 100px;
+        width:96%;
+    margin: 10px;
+    border-radius: 20px;
+}
+section header{
+    margin: 10px;
+    margin-top: 50px;
+}
+section article{
+    margin:10px;
+
+    height: 270px;
+}

@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		       var g = 0;
+		function widthHeightFun(a){
+     
+             if(g != 0){
+             	imgTwo = document.getElementById(g);
+             	imgTwo.style.width = "300px";
+             	imgTwo.style.height = "200px";
+             }
+			img = document.getElementById(a);
+			img.style.width = "500px";
+			img.style.height = "300px";
+			g = a;
+		}
+	</script>
+	<style>
+		img{
+			width: 300px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<img id="a" src="images/26-12.jpg" alt="" onclick="widthHeightFun('a')">
+	<img id="b" src="images/3-12.jpg" alt="" onclick="widthHeightFun('b')">
+	<img id="c" src="images/788331c1bb5c.jpg" alt="" onclick="widthHeightFun('c')">
+	<img id="d" src="images/kuhnya-v-stile-minimalizm.jpg" alt="" onclick="widthHeightFun('d')">
+	<img id="g" src="images/Черная-кухня-в-стиле-контемпорари-и-минимализм.jpg" alt="" onclick="widthHeightFun('g')">
+</body>
+</html>

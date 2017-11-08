@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#save{
+			background-color:blue;
+			color: white;
+			margin-left: 29%;
+			margin-top: 1%;
+		}
+		#text{
+			width: 500px;
+			height: 300px;
+		}
+	</style>
+	<script>
+		var app = false;
+		window.onload = function (){
+			save = document.getElementById("save");
+			save.addEventListener("click",function(){app = true},false);
+		}
+		window.onbeforeunload = function (){
+			if(app == false){
+				return "Вы не сохранили свои данные!";
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="text"> <br />
+	<input type="button" value="Сохранить" id="save">
+</body>
+</html>

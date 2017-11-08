@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <script type="text/javascript">
+    	window.onload = function(){
+
+             var ele = Module.FunctionName();
+             alert(ele.length);
+    	}
+
+    	var Module = {};
+
+
+    	Module.FunctionName = function(){
+    		var b = document.getElementsByClassName("class");
+    		return b;
+    	}
+    	
+    </script>
+</head>
+<body>
+	<div class="class"></div>
+	<div class="class"></div>
+	<div class="hisclass"></div>
+	<div class="class"></div>
+	<div class="class"></div>
+	<div class="herclass"></div>
+	<div class="classs"></div>
+	<div class="ourclass"></div>
+	<div class="yourclass"></div>
+	<div class="class"></div>
+</body>
+</html>

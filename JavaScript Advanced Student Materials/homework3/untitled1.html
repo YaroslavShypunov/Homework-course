@@ -1,0 +1,95 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload = function () {
+			var interval;
+			var min = 0;
+			var sec = 0;
+			var hou = 0;
+			var mintwo = 0;
+			var sectwo = 0;
+			var houtwo = 0;
+			var h = document.getElementById("hour");
+			var htwo = document.getElementById("hourtwo");
+			var m = document.getElementById("minute");
+			var mtwo = document.getElementById("minutetwo");
+			var s = document.getElementById("second");
+			var stwo = document.getElementById("secondtwo");
+
+
+			function Seconds(){
+				stwo.innerHTML = sectwo;
+				s.innerHTML = sec;
+				mtwo.innerHTML = mintwo;
+				m.innerHTML = min;
+				htwo.innerHTML = houtwo;
+				h.innerHTML = hou;
+
+				sectwo++;
+
+				
+				
+				
+
+				if(sectwo == 9){
+					sectwo = 0;
+					sec++;
+					if(sec == 6){
+						sec = 0;
+						mintwo++;
+						if(mintwo == 9){
+							mintwo = 0;
+							min++;
+							if(min == 6){
+								min = 0;
+								houtwo++;
+								if(houtwo == 9){
+									houtwo = 0;
+									hou++;
+								}
+							}
+						} 
+					}
+					
+			}
+		}
+			document.getElementById("startButton").onclick = Starts;
+			document.getElementById("stopButton").onclick = Stops;
+			document.getElementById("resetButton").onclick = Reset;
+
+			function Starts() {
+               interval = setInterval(Seconds,1000);
+			}
+			function Stops(){
+				 clearInterval(interval);
+			}
+
+			function Reset(){
+				clearInterval(interval);
+				sec = 0;
+				min = 0;
+				hou = 0;
+				sectwo = 0;
+				mintwo = 0;
+				houtwo = 0;
+
+				s.innerHTML = sec;
+				m.innerHTML = min;
+				h.innerHTML = hou;
+
+				stwo.innerHTML = sectwo;
+				mtwo.innerHTML = mintwo;
+				htwo.innerHTML = houtwo;
+			}
+		}
+	</script>
+</head>
+<body>
+	<p><span id="hour">0</span><span id="hourtwo">0</span>:<span id="minute">0</span><span id="minutetwo">0</span>:<span id="second">0</span><span id="secondtwo">0</span></p>
+	<input id="startButton" type="button" value="Старт">
+	<input id="stopButton" type="button" value="Стоп">
+	<input id="resetButton" type="button" value="Сбросить">
+</body>
+</html>

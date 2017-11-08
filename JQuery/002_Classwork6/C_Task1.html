@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Классная работа</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+ $(function (){
+        $('.clickClass1').on('click',function(){
+            $('.clickClass1').eq(1).slideDown(1000);
+        });
+        $('.clickClass2').on('click',function(){
+            $('.clickClass2').eq(1).slideDown(1000);
+        });
+        $('.clickClass3').on('click',function(){
+            $('.clickClass3').eq(1).slideDown(1000);
+        })
+ });
+    </script>
+    <style>
+        div{
+        width:100px;
+        height:100px;
+        background-color:aquamarine;
+            padding: 15px;
+            border:2px solid black;
+            float:left;
+            
+        }
+        .names{
+           margin-left: -133px;
+            margin-top:140px;
+            display: none;
+        }
+        #first{
+            margin-left: -401px;
+        }
+        #second{
+            margin-left: -267px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="clickClass1">Андрей</div>
+    <div class="clickClass2">Юлия</div>
+    <div class="clickClass3">Анна</div>
+    <div class="names clickClass1" id="first">Никакого</div>
+    <div class="names clickClass2" id="second">Жирная</div>
+    <div class="names clickClass3">Лох со стажем</div>
+
+</body>
+</html>

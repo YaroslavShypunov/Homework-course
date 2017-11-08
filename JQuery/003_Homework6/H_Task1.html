@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Домашняя работа</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+  $(function() {
+      $('input').on('click',function(){
+        $('#bb').fadeIn(500).delay(500).fadeOut(500).queue(function(){
+        $('#bb2').fadeIn(500).delay(500).fadeOut(500).queue(function(){
+        $('#bb3').fadeIn(1000).delay(1000).fadeOut(1000) });
+         }); });
+})
+    </script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            margin-left: 500px;
+            margin-top: 50px;
+            border: 2px solid black;
+            border-radius: 100px;
+            background: black;
+        }
+        .bb{
+            display:none;
+            margin-top:0px;
+            float:left;
+            background:red;
+        }
+        #bb2{
+            margin-top:50px;
+            background:yellow;
+        }
+        #bb3{
+            margin-top:50px;
+            background:green;
+        }
+    </style>
+</head>
+<body>
+    <div id="bb" class="bb"></div>
+    <div  id="s1"></div>
+    <div id="bb2" class="bb"></div>
+    <div  id="s2"></div>
+    <div id="bb3" class="bb"></div>
+    <div id="s3"></div>
+    <input type="button" value="1">
+
+</body>
+</html>

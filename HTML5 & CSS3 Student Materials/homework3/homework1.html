@@ -1,0 +1,62 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section{
+            margin-left: 30%;
+            margin-top:10%;
+            padding:40px;
+            width:500px;
+            height: 200px;
+            background-color:darkblue;
+            
+        }
+        article{
+            margin-left: 100px;
+            margin-top: 40px;
+            background:white;
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <article>
+    <p id="par1"></p>
+    <p id="par2"></p>
+    <p id="status"></p>
+    </article>
+    </section>
+    <script>
+     navigator.geolocation.getCurrentPosition(func1,errorFun);
+        
+        function func1(arg){
+            var $ = function(selector){
+                return document.getElementById(selector);
+            }
+            $('par1').innerHTML= arg.coords.latitude;
+            $('par2').innerHTML = arg.coords.longitude;
+            
+        }
+        function errorFun(error){
+            switch(error.code){
+                case 0:
+                    updateStatus("При попытки определить геолокацию возникла ошибка " + error.message);
+                    break;
+                case 1:
+                    updateStatus("Пользователь запретил получение данных о местоположении.");
+                    break;
+                case 2:
+                    updateStatus("Браузеру не удалось определить местоположение: " + error.message);
+                    break;
+                case 3:
+                    updateStatus("Истекло доступное время ожидания.");
+            }
+        }
+        function updateStatus(message){
+            document.getElementById("status").innerHTML = message;
+        }
+    </script>
+</body>
+</html>

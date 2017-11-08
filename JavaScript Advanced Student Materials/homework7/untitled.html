@@ -1,0 +1,93 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="untitled.css">
+	<script>
+		window.addEventListener("load",function (){
+	document.forms[0].addEventListener("submit",function (e){
+		var iVar = true;
+
+
+		var div = document.getElementById("div");
+		var span2 = document.getElementById("span2");
+		var span1 = document.getElementById("span1");
+
+
+		var name =  document.getElementsByName("name")[0];
+		var lastName = document.getElementsByName("lastName")[0];
+		var login = document.getElementsByName("login")[0];
+		var password1 = document.getElementsByName("password1")[0];
+		var password2 = document.getElementsByName("password2")[0];
+		var email = document.getElementsByName("email")[0];
+		var mw = document.getElementsByName("mw")[0];
+
+
+		var patternEmail = /\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b/i;
+		var res = email.value.search(patternEmail);
+		if(res == -1){
+           span2.style.display = "inline";
+           iVar = false;
+		}else{
+			span2.style.display = "none";
+		}
+		if(name.value.length == 0){
+			iVar = false;
+		}
+		if(lastName.value.length == 0){
+			iVar = false;
+		}
+		if(login.value.length == 0){
+			iVar = false;
+		}
+		if(password1.value.length == 0){
+			iVar = false;
+		}
+		if(password1.value !== password2.value){
+		  span1.style.display = "inline";
+		  iVar = false;
+		}else{
+			span1.style.display = "none";
+		}
+		if(password2.value.length == 0){
+			iVar = false;
+		}
+		if(email.value.length == 0){
+			iVar = false;
+		}
+		if(mw.value.length == 0){
+			iVar = false;
+		}
+
+		if(!iVar){
+			e.preventDefault();
+
+			div.style.display = "block";
+			setTimeout(function fun(){div.style.display = "none";},2000);
+		}
+	});
+})
+</script>
+</head>
+<body>
+	<form>
+		Name: 
+		<input type="text" name="name"> <br />
+		Last Name:
+		<input type="text" name="lastName"> <br />
+		Login: 
+		<input type="text" name="login"> <br />
+		Password: 
+		<input type="password" name="password1"> <br />
+		Password Confirmation: 
+		<input type="password" name="password2" ><span id="span1"> Пароли не совпадают</span><br />
+		E-mail: 
+		<input type="text" name="email"><span id="span2">Не правильный формат</span><br />
+		SEX: <br />
+		Man: <input type="radio" name="mw" value="man"> 
+		Woman: <input type="radio" name="mw" value="woman"> <br />
+		<input type="submit" value="Further">
+	</form>
+	<div  id="div">Не все поля заполнены или другая ошибка</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var Doc = new Object();
+		Doc.title = prompt("Введите текст title");
+		Doc.body = prompt("Введите текст body");
+		Doc.footer = prompt("Введите текст footer");
+		Doc.date = prompt("Введите текст date");
+		Doc.application = new Object();
+		Doc.application.title= prompt("Введите текст application title");
+		Doc.application.body = prompt("Введите текст application body");
+		Doc.application.footer = prompt("Введите текст application footer");
+		Doc.application.date = prompt("Введите текст application date");
+		for (var elements in Doc) {
+            if (Doc[elements] == Doc.application) {
+                break;
+            }
+            document.write(Doc[elements] + "<br/>");            
+        }
+
+        for (var elements in Doc.application) {
+            document.write(Doc.application[elements] + "<br/>");           
+        }
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

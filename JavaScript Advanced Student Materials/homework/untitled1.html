@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function Constructor(a){
+             this.prop = a;
+             this.method = function(){
+             	alert(this.prop);
+             }
+			} 
+			Constructor.aa = 19;
+			Constructor.bb = "Kiev";
+			Constructor.cc = function(){
+				document.write("Your age: " + this.aa + "<br />");
+			}
+			Constructor.dd = function(){
+				document.write("Your city: " + this.bb + "<br/>");
+			}
+		
+		var h = new Constructor(10);
+		h.method();
+		Constructor.cc();
+		Constructor.dd();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

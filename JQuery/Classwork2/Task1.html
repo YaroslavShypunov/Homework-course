@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Работа в классе</title>
+        <script src="jquery-1.10.2.js"></script>
+        <script>
+
+        $(document).ready(function(){
+            for(var i = 3; i < 10; i = i+3){
+                $("table tr:nth-child(" + i + ")").css("color","red");
+            }
+        });
+
+        </script>
+    </head>
+    <body>
+
+    <table>
+        <tr><td>asgsag</td></tr>
+        <tr><td>dsgsg</td></tr>
+        <tr><td>sdgdsg</td></tr>
+        <tr><td>sdgsdg</td></tr>
+        <tr><td>sdgdsg</td></tr>
+        <tr><td>dsgsdg</td></tr>
+        <tr><td>sdgdsg</td></tr>
+        <tr><td>sdgsdg</td></tr>
+        <tr><td>dsggs</td></tr>
+        <tr><td>sdgdsg</td></tr>
+    </table>
+
+    </body>
+</html>

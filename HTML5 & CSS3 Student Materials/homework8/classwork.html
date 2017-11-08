@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+     $(function(){
+
+              $('#fun').on('click',function(){
+                     if($('#password').val() !== $('#confirmPassword').val()){
+
+                $('#confirmPassword').css('background',"#fdd");
+         }
+   });
+
+     });
+
+    </script>
+    <style>
+        label{
+            width: 180px;
+            float: left;
+            margin: 3px 0px 0px 0px;
+        }
+ input:required + label:after{
+            content: " *";
+        }
+       input:invalid{
+           background: #fdd;
+     }
+      input:valid{
+            background: #dfd;
+        }
+    </style>
+</head>
+<body>
+
+   <p>  
+   <input type="text" required="required"/>
+       <label>Login:</label>
+
+    </p>
+   <p>  
+
+   <input type="password" required="required" id="password"/>
+           <label>Password:</label>
+
+
+     </p>
+   <p> 
+
+    <input type="password" required="required" id="confirmPassword"/> 
+       <label>Confirm the password:</label>
+
+   </p>
+   <p>
+
+   <input type="email" required="required"/>
+     <label>Email:</label>
+ 
+     </p>
+   <p>
+
+   <input type="date"/>
+      <label>Date of birth:</label>
+
+   </p>
+
+              <input type="button" id="fun" value="Отправить">
+</body>
+</html>

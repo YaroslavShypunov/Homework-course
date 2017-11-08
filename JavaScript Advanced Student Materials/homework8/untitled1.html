@@ -1,0 +1,66 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+ window.onload = function(){
+      p = document.getElementById("par");
+     var colPar = functFindColor("size");
+     if(colPar){
+     	document.body.style.fontSize = colPar + "px";
+     }
+     var col = functFindColor("page-color");
+     if(col){
+     	document.body.style.backgroundColor = col;
+     }
+
+ 	document.getElementById("submitClick").addEventListener("click",function(){
+ 		var colorPage = functGetColor("select");
+ 		var sizePar = document.forms[0].texts.value;
+ 		document.cookie = "page-color="  + colorPage + "; max-age= 3600";
+ 		document.cookie = "size="+sizePar + "; max-age=3600";
+ 		document.body.style.backgroundColor = colorPage;
+ 		document.body.style.fontSize = sizePar + "px";
+
+ 	});
+     
+ 	function functGetColor(name){
+ 		elements = document.getElementsByName(name); 
+ 		return elements[0].value;
+ 	}
+
+
+ 	function functFindColor(cookiesName){
+ 		var allcookies = document.cookie;
+ 		var pos = allcookies.indexOf(cookiesName + "=");
+
+ 		if(pos != -1){
+ 			var start = pos + cookiesName.length +1;
+ 			var end = allcookies.indexOf(";",start);
+ 			if(end == -1){
+ 				end = allcookies.length;
+ 			}
+ 			var value = allcookies.substring(start,end);
+ 			return value;
+ 		}
+ 	}
+ }
+
+	</script>
+</head>
+<body>
+  <form name="form1">
+  	<select name="select" id="sel" >
+  		<option value="red">red</option>
+  		<option value="green">green</option>
+  		<option value="blue">blue</option>
+  		<option value="yellow">yellow</option>
+  		<option value="pink">pink</option>
+  	</select>
+  	<input type="text" id="text" name="texts">
+  	<input id="submitClick" type="button" name="submit1" value="Save">
+  </form>
+
+  <p id="par">HELLO WORLD!</p>
+</body>
+</html>

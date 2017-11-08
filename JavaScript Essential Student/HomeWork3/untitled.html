@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Homework</title>
+	<script>
+	document.write("<b> Задание 2 </b> <br />")
+	    var N = +prompt("Введите размерность массива")
+		var tab = new Array(N);
+		for(var i = 0; i < tab.length; i++){
+			 tab[i] = +prompt("Введите значение");
+		}
+		document.write( "Массив tab: " + tab.join(" | ") + "<br /> ");
+		var max = tab[0];
+		var min = tab[0];
+		for(var j = 0; j < tab.length; j++){
+			  if(tab[j] > max){
+			  	max = tab[j];
+			  }
+			  if(tab[j] < min){
+			  	min = tab[j];
+			  }
+		}
+	  document.write("Максимальное число массива: " + max + " <br />");
+	  document.write("Минимальное число массива: " + min + " <br />");
+	  var suma = 0;
+	  var arf = 0;
+   for(var i = 0; i < tab.length; i++){
+            suma +=tab[i];
+            arf = suma;
+            if(tab[i]%2 == 1){
+            	document.write("Нечетные значения: " + tab[i] + " <br />")
+            }
+   }
+
+   document.write("Сумма всех значений массива: " + suma + " <br />");
+   document.write("Среднее арифметическое всех элементов: " + arf/10 + " <br />");
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

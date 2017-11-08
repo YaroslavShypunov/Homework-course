@@ -1,0 +1,56 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload = function (){
+          body = document.getElementById("body");
+          document.getElementById("text1").onblur = function(){
+          	text1 = document.getElementById("text1").value;
+          }
+          document.getElementById("text2").onblur = function(){
+          	text2 = document.getElementById("text2").value;
+          }
+          btn2 = document.getElementById("level2");
+          if(btn2.addEventListener){
+          	btn2.addEventListener("click",function(){
+          	text1 = parseFloat(text1);
+          	text2 = parseFloat(text2);
+          	if(Number.isInteger(text1) == true && Number.isInteger(text2) == true ){
+          	suma = text1 + text2;
+          	p = document.createElement("p");
+          	p.innerHTML = "Сумма: " + suma;
+          	body.appendChild(p); 
+          }else{
+          	p = document.createElement("p");
+          	p.innerHTML = "Не верно заданы числа. Можно вводить только целые числа "
+          	p.style.color = "red";
+          	body.appendChild(p);
+          }
+          	},false);
+          }
+		}
+		function fucntionButton1(){
+			text1 = parseFloat(text1);
+          	text2 = parseFloat(text2);
+          	if(Number.isInteger(text1) == true && Number.isInteger(text2) == true ){
+          	suma = text1 + text2;
+          	p = document.createElement("p");
+          	p.innerHTML = "Сумма: " + suma;
+          	body.appendChild(p); 
+          }else{
+          	p = document.createElement("p");
+          	p.innerHTML = "Не верно заданы числа. Можно вводить только целые числа "
+          	p.style.color = "red";
+          	body.appendChild(p);
+		}
+	}
+	</script>
+</head>
+<body id="body">
+	<input type="text" id="text1">
+	<input type="text" id="text2">
+	<input type="button" id="level0" value="level0" onclick="fucntionButton1()">
+	<input type="button" id="level2" value="level2">
+</body>
+</html>

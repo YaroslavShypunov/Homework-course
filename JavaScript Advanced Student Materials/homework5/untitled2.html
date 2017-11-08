@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="untitled2.css">
+	<script>
+		window.onload = function (){
+			body = document.getElementById("body");
+			btn1 = document.getElementById("button");
+			topMar = 0;
+			if(btn1.addEventListener){
+				btn1.addEventListener("click",function(){
+					div = document.createElement("div");
+					div.className = "class1";
+			        div.style.marginTop += 20 + "px"; 
+			        body.appendChild(div);
+					
+
+
+				},false);
+			}else if(btn1.attachEvent){
+				function handler(){
+					div = document.createElement("div");
+					div.className = "class1";
+			        div.style.marginTop += 20 + "px"; 
+			        body.appendChild(div);
+					
+
+
+				}
+				btn1.attachEvent("onclick",handler)
+			}
+
+		}
+
+	</script>
+</head>
+<body id = "body">
+	<input type="button" id="button" value="Нажми меня!">
+</body>
+</html>
