@@ -1,0 +1,76 @@
+<html ng-app="kalkulator">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../Libraries/angular.js"></script>
+    <link rel="stylesheet" href="../Libraries/bootstrap-theme.css">
+    <link rel="stylesheet" href="../Libraries/bootstrap.css">
+    <script>
+        var model = [{
+            a: null,
+            b: null,
+            c: null,
+            d: null
+       } ];
+        var kalkulator = angular.module('kalkulator',[]);
+        kalkulator.controller("kalkulatorCtrl",function ($scope){
+            $scope.kalk = model;
+            
+            $scope.plus = function (){
+                
+                $scope.kalk.c = "plus";
+                $scope.kalk.a = parseInt($scope.kalk.a);
+                $scope.kalk.b = parseInt($scope.kalk.b);
+               $scope.kalk.d = $scope.kalk.a + $scope.kalk.b;
+            }
+            
+            $scope.minus = function (){  
+                
+                 $scope.kalk.c = "minus";
+                 $scope.kalk.d = $scope.kalk.a - $scope.kalk.b;
+            }
+            $scope.mn = function (){
+                  
+                $scope.kalk.c = "mn";
+                 $scope.kalk.d = $scope.kalk.a * $scope.kalk.b;
+        
+            }
+            $scope.dz = function (){
+                $scope.kalk.c = "dz";
+                $scope.kalk.d = $scope.kalk.a / $scope.kalk.b;
+            }
+            
+        });
+    </script>
+    <style>
+    div{
+        margin-top: 20px;
+    width: 400px;
+        height: 200px;
+        }
+    </style>
+</head>
+<body ng-controller="kalkulatorCtrl" class="container">
+   <input type="text"  ng-model="kalk.a"> <br>
+   <input type="text" ng-model="kalk.b"> <br>
+    <button class="btn btn-default" ng-click="plus()">+</button>
+    <button class="btn btn-default" ng-click="minus()">-</button>
+    <button class="btn btn-default" ng-click="mn()">*</button>
+    <button class="btn btn-default" ng-click="dz()">/</button>
+ <!--   <p>{{kalk.d}}</p> -->
+ <div ng-switch on="kalk.c">
+        <p ng-switch-when="plus">
+            {{kalk.a}} + {{kalk.b}} = {{kalk.d}}
+        </p>
+            <p ng-switch-when="minus">
+            {{kalk.a}}-{{kalk.b}} = {{kalk.d}}
+        </p>
+                <p ng-switch-when="mn">
+            {{kalk.a}} * {{kalk.b}} = {{kalk.d}}
+        </p>
+                <p ng-switch-when="dz">
+            {{kalk.a}} / {{kalk.b}} = {{kalk.d}}
+        </p>
+    </div> 
+</body>
+</html>
