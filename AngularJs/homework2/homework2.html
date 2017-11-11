@@ -1,0 +1,104 @@
+<html ng-app="questionsSpa">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+        <script src="../Libraries/angular.js"></script>
+    <link rel="stylesheet" href="../Libraries/bootstrap-theme.css">
+    <link rel="stylesheet" href="../Libraries/bootstrap.css">
+
+    <script>
+
+
+        var questionsSpa = angular.module('questionsSpa',[]);
+        
+        
+        questionsSpa.controller('questionsSpaCtrl',function ($scope){
+            $scope.questions = [{ hquestion:"Как вы о нас узнали", var1:"От друзей", var2:"В интернете", var3:"По телевизору", var4:"Другое" , an:""},
+                  {hquestion:"В каком городе вы проживаете:", var1:"Киев", var2:"Днепро", var3:"Харьков", var4:"Запорожье", an:""},
+                  {hquestion:"Посоветовали бы вы нас своим друзьям:", var1:"Да", var2:"Нет", var3:"Скорей да, чем нет", var4:"Скорей нет, чем да", an:""},
+                  {hquestion:"Оцените работу персонала от 2 до 5", var1:'2', var2:"3", var3:"4", var4:"5", an:""},
+                  {hquestion:"Чтобы можного было улучшить в нашей работе", var1:"Работу персонала",var2:"Ничего",var3:"Внешний вид салона",var4:"Локализацию", an:""}];
+            $scope.value = null;                
+        });
+    </script>
+</head>
+<body ng-controller="questionsSpaCtrl" class="container">
+ <div   class="panel panel-default">
+       <h1 class="panel-heading">Добро пожаловать</h1>
+     <h2 class="panel-heading">Для начала вам нужно пройти тест</h2>
+          <div class="well">
+           <input type="radio" ng-click="value = 1"> Вопрос 1<br>
+           <input type="radio" ng-click="value = 2">  Вопрос 2<br>
+           <input type="radio" ng-click="value = 3">  Вопрос 3<br>
+           <input type="radio" ng-click=" value = 4">  Вопрос 4<br>
+           <input type="radio" ng-click="value = 5"> Вопрос 5 <br>
+           </div>
+           <div class="well">
+               <div ng-switch on="value">
+                   <div ng-switch-when="1">
+                      <h3>{{questions[0].hquestion}}</h3>
+                       <button class="btn btn-info" ng-click="questions[0].an = questions[0].var1">{{questions[0].var1}}</button>
+                       <button class="btn btn-danger" ng-click="questions[0].an = questions[0].var2">{{questions[0].var2}}</button>
+                       <br>
+                       <button class="btn btn-primary" ng-click="questions[0].an = questions[0].var3">{{questions[0].var3}}</button>
+                       <button class="btn btn-success" ng-click="questions[0].an = questions[0].var4">{{questions[0].var4}}</button>
+                   </div>
+                   
+                   
+                                      <div ng-switch-when="2">
+                      <h3>{{questions[1].hquestion}}</h3>
+                       <button class="btn btn-info" ng-click="questions[1].an = questions[1].var1">{{questions[1].var1}}</button>
+                       <button class="btn btn-danger" ng-click="questions[1].an = questions[1].var2">{{questions[1].var2}}</button>
+                       <br>
+                       <button class="btn btn-primary" ng-click="questions[1].an = questions[1].var3">{{questions[1].var3}}</button>
+                       <button class="btn btn-success" ng-click="questions[1].an = questions[1].var4">{{questions[1].var4}}</button>
+                   </div>
+                   
+                   
+                                      <div ng-switch-when="3">
+                      <h3>{{questions[2].hquestion}}</h3>
+                       <button class="btn btn-info" ng-click="questions[2].an = questions[2].var1">{{questions[2].var1}}</button>
+                       <button class="btn btn-danger" ng-click="questions[2].an = questions[2].var2">{{questions[2].var2}}</button>
+                       <br>
+                       <button class="btn btn-primary" ng-click="questions[2].an = questions[2].var3">{{questions[2].var3}}</button>
+                       <button class="btn btn-success" ng-click="questions[2].an = questions[2].var4">{{questions[2].var4}}</button>
+                   </div>
+                   
+                   
+                                      <div ng-switch-when="4">
+                      <h3>{{questions[3].hquestion}}</h3>
+                       <button class="btn btn-info" ng-click="questions[3].an = questions[3].var1">{{questions[3].var1}}</button>
+                       <button class="btn btn-danger" ng-click="questions[3].an = questions[3].var2">{{questions[3].var2}}</button>
+                       <br>
+                       <button class="btn btn-primary" ng-click="questions[3].an = questions[3].var3">{{questions[3].var3}}</button>
+                       <button class="btn btn-success" ng-click="questions[3].an = questions[3].var4">{{questions[3].var4}}</button>
+                   </div>
+                   
+                   
+                   
+                                      <div ng-switch-when="5">
+                      <h3>{{questions[4].hquestion}}</h3>
+                       <button class="btn btn-info" ng-click="questions[4].an = questions[4].var1">{{questions[4].var1}}</button>
+                       <button class="btn btn-danger" ng-click="questions[4].an = questions[4].var2">{{questions[4].var2}}</button>
+                       <br>
+                       <button class="btn btn-primary" ng-click="questions[4].an = questions[4].var3">{{questions[4].var3}}</button>
+                       <button class="btn btn-success" ng-click="questions[4].an = questions[4].var4">{{questions[4].var4}}</button>
+                   </div>
+                   
+ 
+                   
+               </div>
+              
+           </div>
+                    
+                             <div class="well">
+                       <h3>Ответы</h3>
+                       <p>{{questions[0].an}}</p>
+                       <p>{{questions[1].an}}</p>
+                       <p>{{questions[2].an}}</p>
+                       <p>{{questions[3].an}}</p>
+                       <p>{{questions[4].an}}</p>
+                   </div>
+ </div>
+</body>
+</html>
