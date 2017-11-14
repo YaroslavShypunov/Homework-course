@@ -1,0 +1,87 @@
+<html ng-app="formReg">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='../Libraries/angular.js'></script>
+    <link rel="stylesheet" href="../Libraries/bootstrap-theme.css">
+    <link rel="stylesheet" href="../Libraries/bootstrap.css">
+    <script>
+       angular.module('formReg',[])
+        .controller('formRegCtrl',function ($scope){
+           $scope.addNewUser = function (userDetails){
+                             if(userDetails.pass !== userDetails.confirmPassword){
+                    $scope.message = "You aren't right confirmed password";
+               }else{
+               $scope.message = 'name: ' + userDetails.name + ' surname: ' + userDetails.surname + ' patronymic: ' + userDetails.patronymic + " tel: " + userDetails.tel + " email: " + userDetails.email + " password: " + userDetails.pass;
+                                
+ 
+           }}
+           $scope.message = "Ready";
+       });
+    </script>
+    <style>
+        #div{
+            width: 800px;
+            margin-left: 20%;
+            margin-top: 20px;
+        }
+        
+        form .ng-pristine{
+            border: 1px dotted blue;
+        }
+        form .ng-invalid.ng-dirty{
+            background: lightpink;
+            color:black;
+        }
+        form .ng-valid.ng-dirty{
+            background: lightgreen;
+            color: black;
+        }
+    </style>
+    
+</head>
+<body>
+   <div class="panel" id="div" ng-controller="formRegCtrl"> 
+       <form name="MyForm" novalidate ng-submit="addNewUser(NewUser)">
+       <div class="well">
+        <div class='form-group'>
+        <label>Name: </label>
+        <input name="userName" type="text" class="form-control" required ng-model="NewUser.name">
+        </div>
+        
+        <div class='form-group'>
+        <label>Surname: </label>
+        <input name="userSurname" type="text" class='form-control' required ng-model="NewUser.surname">
+        </div>
+        
+        <div class='form-group'>
+        <label>Patronymic: </label>
+        <input type="text" class='form-control' name="userPatronymic" ng-model="NewUser.patronymic">
+        </div>
+        
+        <div class='form-group'>
+        <label>Email: </label>
+        <input name="userEmail" type="email" class='form-control' required ng-model="NewUser.email">
+        </div>
+        
+        <div class='form-group'>
+        <label>Tel: </label>
+        <input name="userTel" type="text" class='form-control' ng-model="NewUser.tel">
+        </div>
+        
+        <div class='form-group'>
+        <label>Password: </label>
+        <input name="userPassword" type="password" class='form-control' required ng-model="NewUser.pass">
+        </div>
+        
+        <div class='form-group'>
+        <label>Confirm password: </label>
+        <input name="confirmPassword" type="password" class='form-control' required ng-model="NewUser.confirmPassword" >
+        </div>
+        <button class="btn btn-primary btn-block" ng-disabled="MyForm.$invalid" >To register</button>
+        </div>
+    </form>
+    <div class="well">{{message}}</div>
+    </div>
+</body>
+</html>
